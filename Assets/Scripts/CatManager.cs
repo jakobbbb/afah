@@ -9,6 +9,9 @@ public class CatManager : MonoBehaviour {
     [SerializeField]
     private Cat m_CatPrefab;
 
+    private List<BoxCollider2D> m_WalkableColliders = new();
+
+
     private void Start() {
         if (Instance == null) {
             Instance = this;
@@ -16,6 +19,23 @@ public class CatManager : MonoBehaviour {
         } else {
             Destroy(this);
         }
+
+        foreach (var collider in FindObjectsByType<BoxCollider2D>(FindObjectsSortMode.None)) {
+            if (collider.tag.Equals("CatWalkable")) {
+                m_WalkableColliders.Add(collider);
+            }
+        }
+        Debug.Log("Found " + m_WalkableColliders.Count + " kitty-compatible colliders :3");
+    }
+
+    public bool IsWalkable(Vector3 pos) {
+        foreach (var collider in m_WalkableColliders) {
+            pos.z = collider.bounds.center.z;  // ignore z
+            if (collider.bounds.Contains(pos)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     
