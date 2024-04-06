@@ -53,9 +53,7 @@ Jesper: Meow.
 ===
 title: day2_evenlater
 ---
-<<set $friend = $friend + 1>>
 Phone: *ring* *ring*
-You: Oh, it's my friend!
 You: Huh?
 You: My parents are calling me.
     -> Pick up phone. 
@@ -69,8 +67,6 @@ title: parentsphone1
 You: Hello.
 Parents: Hello, sweetie.
 Parents: How are you?
-Phone: *ring* *ring*
-You: Oh, it's my friend!
 You: Good.
 You: And you?
 Parents: We are also good.

@@ -41,11 +41,7 @@ Lotte: Meow.
 <<endif>>
 <<if $Kasimir == true>>
 Kasimir: Meow.
-<<endif>>You: They mean well, you know.
-You: But they don't understand me.
-You: Not like you do.
-You: ...
-You: 
+<<endif>>
 <<if $Jesper == true>>
 Jesper: Meow.
 <<endif>>
@@ -73,7 +69,7 @@ You: Come in!
 Friend: Huh?
 Friend: Well, hello there, kittys.
 Friend: Since when do you have cats?
-You: 
+You: ...
     -> Um... since three days ago?
     -> Since Wednesday.
     -> What are you talking about, I've always had them.
