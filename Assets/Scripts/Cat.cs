@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class Cat : MonoBehaviour {
     private Collider2D m_CurrentCollider;
@@ -51,10 +52,14 @@ public class Cat : MonoBehaviour {
                 MoveTowardsGoal();
                 break;
             case CatState.SLEEPING:
-            break;
+                break;
         }
         UpdateClosest();
         Unstuck();
+
+        var pos = transform.position;
+        pos.z = transform.position.y;
+        transform.position = pos;
 
         m_JumpCooldown -= Time.fixedDeltaTime;
         m_StateChangeRollCooldown -= Time.fixedDeltaTime;
