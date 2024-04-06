@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2062652842666304475}
   - component: {fileID: 6642276702485387261}
+  - component: {fileID: 8771130119966687286}
   m_Layer: 0
   m_Name: CatManager
   m_TagString: Untagged
@@ -47,3 +48,15 @@ MonoBehaviour:
   m_AvailableCats:
   - {fileID: 11400000, guid: e9a7b33f372d39b08bb19bee25387486, type: 2}
   m_CatPrefab: {fileID: 5357162203590811542, guid: 45ab9278d2aedc854a710b25997afd71, type: 3}
+--- !u!114 &8771130119966687286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646819414178067683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d23e0c392195147ea0897ee4df260b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

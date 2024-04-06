@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -21,11 +22,10 @@ public class Cat : MonoBehaviour {
     private float m_StateChangeRollCooldown = 0f;
     private float m_StateTimer = 0f;
 
-    [SerializeField]
     private Transform m_NavTarget;
     [SerializeField]
     private Transform m_NavBase;
-    private SpriteRenderer m_Renderer;
+    private GameObject m_Renderer;
 
     private float m_MaxVelocity = 4f;
 
@@ -35,7 +35,8 @@ public class Cat : MonoBehaviour {
         CatManager.Instance.RegisterCat(this);
         m_StateChangeRollCooldown = UnityEngine.Random.Range(0f, 5f);
         m_JumpCooldown = UnityEngine.Random.Range(0f, 0.5f);
-        m_Renderer = GetComponentInChildren<SpriteRenderer>();
+        m_Renderer = this.gameObject;
+        ChooseFoodTarget();
     }
 
     void Update() {
@@ -56,6 +57,7 @@ public class Cat : MonoBehaviour {
                 m_NavTarget = f.transform;
             }
         }
+        Debug.Log("Got " + foods.Length + " foods uww");
     }
 
     void FixedUpdate() {
