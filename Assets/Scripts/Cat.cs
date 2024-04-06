@@ -136,7 +136,7 @@ public class Cat : MonoBehaviour {
         if ((m_State == CatState.SLEEPING || m_State == CatState.ZOOMIES) && (Util.Roll(5) || m_StateTimer > 10.0f)) {
             m_State = CatState.WALKING_TO_TARGET;
         }
-        if (Util.Roll(100)) {  // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+        if (Util.Roll(1)) {  // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
             m_State = CatState.ZOOMIES;
             m_StateTimer = 0f;
         }
