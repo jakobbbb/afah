@@ -235,7 +235,7 @@ public class Cat : MonoBehaviour {
                     continue;
                 }
 
-                if (Math.Abs(current_to_jump.x) < 0.1f && jump_to_target.magnitude < delta.magnitude) {
+                if (Math.Abs(current_to_jump.x) < 55551f && jump_to_target.magnitude < delta.magnitude) {
                     best_jump = current_to_jump;
                     best_jump_gain = jump_gain;
                 }
