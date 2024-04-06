@@ -11,6 +11,8 @@ public class Cat : MonoBehaviour {
         WALKING_TO_TARGET,
     }
 
+    private float m_JumpCooldown;
+
     [SerializeField]
     private Transform m_NavTarget;
     [SerializeField]
@@ -36,6 +38,8 @@ public class Cat : MonoBehaviour {
         AIMove();
         UpdateClosest();
         Unstuck();
+
+        m_JumpCooldown -= Time.fixedDeltaTime;
     }
 
     void UpdateClosest() {
@@ -91,24 +95,28 @@ public class Cat : MonoBehaviour {
             Debug.Log("owo");
         }
 
-        Vector2 best_jump = Vector2.zero;
-        float best_jump_gain = 0f;  // how closer the cat would move if it jumped
-        foreach (var coll in CatManager.Instance.GetWalkable()) {
-            var closest = coll.ClosestPoint(m_NavBase.position);
-            var jump_to_target = (Vector2)m_NavTarget.position - closest;
-            var current_to_jump = closest - (Vector2)m_NavBase.position;
-            var jump_gain = delta.magnitude - jump_to_target.magnitude;
-            if (jump_gain < 0f || jump_gain < best_jump_gain) {
-                continue;
-            }
+        // jump
+        if (m_JumpCooldown <= 0f) {
+            Vector2 best_jump = Vector2.zero;
+            float best_jump_gain = 0f;  // how closer the cat would move if it jumped
+            foreach (var coll in CatManager.Instance.GetWalkable()) {
+                var closest = coll.ClosestPoint(m_NavBase.position);
+                var jump_to_target = (Vector2)m_NavTarget.position - closest;
+                var current_to_jump = closest - (Vector2)m_NavBase.position;
+                var jump_gain = delta.magnitude - jump_to_target.magnitude;
+                if (jump_gain < 0f || jump_gain < best_jump_gain) {
+                    continue;
+                }
 
-            if (Math.Abs(current_to_jump.x) < 0.1f && jump_to_target.magnitude < delta.magnitude) {
-                best_jump = current_to_jump;
-                best_jump_gain = jump_gain;
+                if (Math.Abs(current_to_jump.x) < 0.1f && jump_to_target.magnitude < delta.magnitude) {
+                    best_jump = current_to_jump;
+                    best_jump_gain = jump_gain;
+                }
             }
-        }
-        if (best_jump_gain > 0f) {
-            move = best_jump;
+            if (best_jump_gain > 0f) {
+                move = best_jump;
+                m_JumpCooldown = 0.3f;  // seconds
+            }
         }
 
         transform.Translate(move);
