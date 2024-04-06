@@ -23,7 +23,7 @@ title: catsmeow94
 Koschka: Meow.
 <<if $Miette == true>>
 Miette: Meow.
-<<endif>><<declare $friend = 0>>
+<<endif>><<$friend = 0>>
 <<if $Dicki == true>>
 Dicki: Meow.
 <<endif>>

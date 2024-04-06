@@ -11,13 +11,14 @@ public class Cat : MonoBehaviour {
     public enum CatState {
         WALKING_TO_TARGET,
         SLEEPING,
+        ZOOMIES,
     }
 
     private CatState m_State = CatState.WALKING_TO_TARGET;
 
     private float m_JumpCooldown;
     private float m_StateChangeRollCooldown = 0f;
-    private float m_SleepTime = 0f;
+    private float m_StateTimer = 0f;
 
     [SerializeField]
     private Transform m_NavTarget;
@@ -63,7 +64,7 @@ public class Cat : MonoBehaviour {
 
         m_JumpCooldown -= Time.fixedDeltaTime;
         m_StateChangeRollCooldown -= Time.fixedDeltaTime;
-        m_SleepTime += Time.fixedDeltaTime;
+        m_StateTimer += Time.fixedDeltaTime;
     }
 
     void ApplyStateChange() {
@@ -79,10 +80,10 @@ public class Cat : MonoBehaviour {
     bool RollForStateChange() {
         var old_state = m_State;
         if (m_State == CatState.WALKING_TO_TARGET && Util.Roll(3)) {
-            m_SleepTime = 0f;
+            m_StateTimer = 0f;
             m_State = CatState.SLEEPING;
         }
-        if (m_State == CatState.SLEEPING && (Util.Roll(5) || m_SleepTime > 10.0f)) {
+        if (m_State == CatState.SLEEPING && (Util.Roll(5) || m_StateTimer > 10.0f)) {
             m_State = CatState.WALKING_TO_TARGET;
         }
 
