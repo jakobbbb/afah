@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class Cat : MonoBehaviour {
-
+    private Collider2D m_CurrentCollider;
     public enum CatState {
         WALKING_TO_TARGET,
     }
@@ -32,6 +32,42 @@ public class Cat : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        Unstuck();
+        AIMove();
+        UpdateClosest();
+        Unstuck();
+    }
+
+    void UpdateClosest() {
+        float closest_dist = 999999f;
+        Collider2D closest = null;
+        foreach (var c in CatManager.Instance.GetWalkable()) {
+            c.GetComponent<SpriteRenderer>().color = Color.white;
+            Vector3 p = c.bounds.ClosestPoint(m_NavBase.position);
+            p.z = 0f;
+            var dist = (p - m_NavBase.position).magnitude;
+            if (dist < closest_dist) {
+                closest = c;
+                closest_dist = dist;
+            }
+        }
+        if (closest != null) {
+            m_CurrentCollider = closest;
+            m_CurrentCollider.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+    }
+
+    void Unstuck() {
+        if (CatManager.Instance.IsWalkable(m_NavBase.position)) {
+            return;
+        }
+
+        // find closest collider and move towards its center
+        var dir = (m_CurrentCollider.bounds.center - m_NavBase.position).normalized;
+        transform.Translate(dir * Time.fixedDeltaTime);
+    }
+
+    void AIMove() {
         Vector2 move = Vector2.zero;
         Vector2 delta = m_NavTarget.position - m_NavBase.position;
         var velocity = m_MaxVelocity;
