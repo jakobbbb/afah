@@ -38,10 +38,17 @@ Boss: You are fired!!
     <<set $unemployment = true>>
 You: Okay.
 You: More time for me and you, kittys.
+You: But how will I afford your care if I don't have money?
 <<endif>>
 You: ...
+<<if $unemployment == true>>
+You: That's a problem for another day. 
+You: Right now..
+<<endif>>
 You: I need more cat litter.
 -> Buy cat litter. 
     <<set $money = $money - (2*20)>>
 You: At least we have each other, don't we, kittys?
+You: ...
+You: Good night, kittys.
 ===
