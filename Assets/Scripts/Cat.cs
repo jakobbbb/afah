@@ -40,6 +40,7 @@ public class Cat : MonoBehaviour {
         ChooseFoodTarget();
         m_Animator = GetComponentInChildren<Animator>();
         ApplyStateChange();
+        m_Animator.SetFloat("Speed", UnityEngine.Random.Range(0.9f, 1.1f));
     }
 
     void Update() {
