@@ -33,6 +33,7 @@ public class Cat : MonoBehaviour {
     private Animator m_Animator;
     [SerializeField]
     private GameObject m_Empty;
+    
 
     void Start() {
         Debug.Log("meow");
@@ -65,19 +66,36 @@ public class Cat : MonoBehaviour {
         m_ZoomAndIdleTarget.position = new Vector3(x, y, m_ZoomAndIdleTarget.position.z);
         m_NavTarget = m_ZoomAndIdleTarget;
     }
+   
     void ChooseFoodTarget() {
         var foods = FindObjectsByType<Food>(FindObjectsSortMode.None);
         float min_dist = 9999999f;
+        Transform target = null;
         foreach (var f in foods) {
-            var dist = (f.transform.position - m_NavBase.transform.position).magnitude;
+            var a = f.transform.position;
+            var b = m_NavBase.transform.position;
+            a.z = b.z; // ignoer z AAAaaaaa i spent way to long on figuring this out AAAaaaAAaAAAAAAaaAAAAAAa
+            var dist = (a - b).magnitude;
+            Debug.Log(dist + "d");
             if (dist < min_dist) {
                 min_dist = dist;
-                m_NavTarget = f.transform;
+                target = f.transform;
             }
         }
-        if (min_dist > 4f) {
-            //ChooseZoomieTarget();  TODO
+        Debug.Log(min_dist);
+        if (min_dist > 10f) {
+            if (WalkingTowardsFood()) {
+                ChooseZoomieTarget();
+            }
+            return;
         }
+        if (target) {
+            m_NavTarget = target;
+        }
+    }
+
+    private bool WalkingTowardsFood() {
+        return m_NavTarget != m_ZoomAndIdleTarget;
     }
 
     void FixedUpdate() {
@@ -99,7 +117,9 @@ public class Cat : MonoBehaviour {
             case CatState.SLEEPING:
                 break;
             case CatState.ZOOMIES:
-                ChooseZoomieTarget();
+                if (Util.Roll(10)) {
+                    ChooseZoomieTarget();
+                }
                 MoveTowardsGoal();
                 break;
         }
@@ -153,7 +173,7 @@ public class Cat : MonoBehaviour {
         if ((m_State == CatState.SLEEPING || m_State == CatState.ZOOMIES) && (Util.Roll(5) || m_StateTimer > 10.0f)) {
             m_State = CatState.WALKING_TO_TARGET;
         }
-        if (Util.Roll(1)) {  // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+        if (Util.Roll(100)) {  // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
             m_State = CatState.ZOOMIES;
             m_StateTimer = 0f;
         }
@@ -177,7 +197,6 @@ public class Cat : MonoBehaviour {
         }
         if (closest != null) {
             m_CurrentCollider = closest;
-            m_CurrentCollider.GetComponent<SpriteRenderer>().color = Color.green;
         }
     }
 
@@ -229,6 +248,9 @@ public class Cat : MonoBehaviour {
         if (delta.magnitude < 0.1f) {
             // Target reached
             m_Animator.SetTrigger("Idle");
+            if (!WalkingTowardsFood() && Util.Roll(1)) {
+                ChooseZoomieTarget();
+            }
             return;
         } else {
             if (m_State == CatState.WALKING_TO_TARGET) {
@@ -273,5 +295,12 @@ public class Cat : MonoBehaviour {
 
         transform.Translate(move);
         
+    }
+
+    void OnDrawGizmos() {
+        if (!m_NavTarget) return;
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(m_NavTarget.position, 0.15f);
+        Gizmos.DrawLine(m_NavBase.position, m_NavTarget.position);
     }
 }
