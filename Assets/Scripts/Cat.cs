@@ -34,6 +34,8 @@ public class Cat : MonoBehaviour {
     [SerializeField]
     private GameObject m_Empty;
     private float m_FoodTimer = 0f;
+    [SerializeField]
+    private SpriteRenderer m_Hungy = null;
 
     void Start() {
         Debug.Log("meow");
@@ -68,7 +70,7 @@ public class Cat : MonoBehaviour {
     }
 
     bool Hungy() {
-        return m_FoodTimer < 10f;
+        return m_FoodTimer < 6f;
     }
    
     void ChooseFoodTarget() {
@@ -132,6 +134,8 @@ public class Cat : MonoBehaviour {
         }
         UpdateClosest();
         Unstuck();
+
+        m_Hungy.enabled = Hungy(); 
 
         var pos = transform.position;
         pos.z = transform.position.y;
