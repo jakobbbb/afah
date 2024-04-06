@@ -1,1 +1,47 @@
-
+title: day6_morning
+---
+You: Ugh.
+You: I have to go to work today, kittys.
+You: ... 
+You: I don't want to.
+You: But I guess I gotta go.
+You: ...
+You: I had a dream. 
+You: That I carried two cats.
+You: One in each arm.
+You: And I guess I felt... happy?
+You: ...
+You: Anyways. Off to work.
+<<declare $unemployment = false>>
+You: After I feed you.
+<<set $money = $money - (5*5)>>
+<<jump day6_later>>
+===
+title: day6_later
+---
+You: Two more!
+You: What bliss!
+You: Maybe I can actually be happy?
+Phone: *ring* *ring*
+You: Hello?
+Boss: Where are you?
+You: Um, at home?
+Boss: And why are you at home??
+You: I couldn't make it to work?
+<<if $boss == true>>
+Boss: You are getting on my last nerve!
+Boss: Be here tomorrow or you are fired!
+You: ...
+You: I will be.
+<<else>>
+Boss: You are fired!!
+    <<set $unemployment = true>>
+You: Okay.
+You: More time for me and you, kittys.
+<<endif>>
+You: ...
+You: I need more cat litter.
+-> Buy cat litter. 
+    <<set $money = $money - (2*20)>>
+You: At least we have each other, don't we, kittys?
+===

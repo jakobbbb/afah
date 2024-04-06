@@ -50,9 +50,9 @@ Jesper: Meow.
 <<jump day2_end>>
 <<endif>>
 ===
-title: day2_evenlater
----
+<<set $friend = $friend + 1>>
 Phone: *ring* *ring*
+You: Oh, it's my friend!
 You: Huh?
 You: My parents are calling me.
     -> Pick up phone. 
@@ -66,6 +66,9 @@ title: parentsphone1
 You: Hello.
 Parents: Hello, sweetie.
 Parents: How are you?
+<<set $friend = $friend + 1>>
+Phone: *ring* *ring*
+You: Oh, it's my friend!
 You: Good.
 You: And you?
 Parents: We are also good.
@@ -79,6 +82,9 @@ You: Sorry, I used you as an excuse to end the call.
 You: ...
 You: But I can't deal with them right now.
 <<jump catsmeow92>>
+<<set $friend = $friend + 1>>
+Phone: *ring* *ring*
+You: Oh, it's my friend!
 ===
 title: day2_end
 ---
