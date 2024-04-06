@@ -51,12 +51,12 @@ public class DragManager : MonoBehaviour {
         }
 
         var cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float min_y = 999999f;  // lowest y is frontmost
+        float min_z = 999999f;  // lowest y is frontmost
         Draggable under_mouse = null;
         foreach (var d in m_Draggables) {
             cursor.z = d.Collider.bounds.center.z;
-            if (d.Collider.bounds.Contains(cursor) && cursor.y < min_y) {
-                min_y = cursor.y;
+            if (d.Collider.bounds.Contains(cursor) && cursor.z < min_z) {
+                min_z = cursor.z;
                 under_mouse = d;
                 Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaa");
             }

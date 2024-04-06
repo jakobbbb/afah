@@ -24,6 +24,7 @@ public class Cat : MonoBehaviour {
     private Transform m_NavTarget;
     [SerializeField]
     private Transform m_NavBase;
+    private SpriteRenderer m_Renderer;
 
     private float m_MaxVelocity = 4f;
 
@@ -33,6 +34,7 @@ public class Cat : MonoBehaviour {
         CatManager.Instance.RegisterCat(this);
         m_StateChangeRollCooldown = UnityEngine.Random.Range(0f, 5f);
         m_JumpCooldown = UnityEngine.Random.Range(0f, 0.5f);
+        m_Renderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update() {
@@ -143,13 +145,13 @@ public class Cat : MonoBehaviour {
         var delta_x = velocity * new Vector2(delta_norm.x + move.x, 0) * Time.fixedDeltaTime;
         var delta_y = velocity * new Vector2(0, delta_norm.y + move.y) * Time.fixedDeltaTime;
 
-        var scale = transform.localScale;
+        var scale = m_Renderer.transform.localScale;
         if (delta_x.x > 0f && scale.x < 0f) {
             scale.x = -scale.x;
         } else if (delta_x.x < 0f && scale.x > 0f) {
             scale.x = -scale.x;
         }
-        transform.localScale = scale;
+        m_Renderer.transform.localScale = scale;
 
         if (delta.magnitude < 0.1f) {
             // Target reached
