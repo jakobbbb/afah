@@ -25,4 +25,5 @@ You: Tomorrow might look nicer.
 You: Good night, kittys.
 Koschka: ...
 Koschka: Time to go to work.
-==
+<<jump day9_morning>>
+===

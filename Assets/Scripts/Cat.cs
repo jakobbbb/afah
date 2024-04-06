@@ -42,13 +42,17 @@ public class Cat : MonoBehaviour {
         m_Animator = GetComponentInChildren<Animator>();
         ApplyStateChange();
         m_Animator.SetFloat("Speed", UnityEngine.Random.Range(0.9f, 1.1f));
-        m_ZoomAndIdleTarget = new GameObject(name + "_zoom").transform;
+        m_ZoomAndIdleTarget = new GameObject(name + "_zoom").AddComponent<Transform>();
+        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAA" + m_ZoomAndIdleTarget);
     }
 
     void Update() {
     }
     void ChooseZoomieTarget() {
         var n = CatManager.Instance.GetWalkable().Count;
+        if (n == 0) {
+            return;
+        }
         var i = UnityEngine.Random.Range(0, n);
         var c = CatManager.Instance.GetWalkable()[i];
         var x = UnityEngine.Random.Range(c.bounds.min.x,c.bounds.max.x);
@@ -66,7 +70,9 @@ public class Cat : MonoBehaviour {
                 m_NavTarget = f.transform;
             }
         }
-        Debug.Log("Got " + foods.Length + " foods uww");
+        if (min_dist > 4f) {
+            ChooseZoomieTarget();
+        }
     }
 
     void FixedUpdate() {

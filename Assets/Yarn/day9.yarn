@@ -1,6 +1,6 @@
 title: day9_morning
 ---
-<<declare $crows = 0>>
+<<set $crows = 0>>
 <<set $money = $money + 15>>
 <<if $Miette == true>>
 <<set $money = $money + 15>>
@@ -136,4 +136,5 @@ You: Good night, kittys.
 Koschka: ...
 Koschka: Someone's losing their damn mind.
 Koschka: Anyways, off to work.
+<<jump day10_morning>>
 ===
