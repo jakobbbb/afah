@@ -1,0 +1,108 @@
+title: day4_morning
+---
+You: Good morning, kittys!
+<<jump catsmeow94>>
+===
+title: day4_morning2
+---
+You: What a beautiful day!
+You: I think I'll go for a walk.
+You: ... after I feed you, of course.
+<<set $money = $money - (3*5)>>
+<<jump day4_later>>
+===
+
+title: day4_later
+---
+<<set $cats = $cats + 1>>
+You: Huh, guess I have four cats now.
+<<jump catsmeow94>>
+===
+title: catsmeow94
+---
+Koschka: Meow.
+<<if $Miette == true>>
+Miette: Meow.
+<<endif>><<declare $friend = 0>>
+<<if $Dicki == true>>
+Dicki: Meow.
+<<endif>>
+<<if $Schinken == true>>
+Schinken: Meow.
+<<endif>>
+<<if $Peter == true>>
+MPeter: Meow.
+<<endif>>
+<<if $Luise == true>>
+Luise: Meow.
+<<endif>>
+<<if $Lotte == true>>
+Lotte: Meow.
+<<endif>>
+<<if $Kasimir == true>>
+Kasimir: Meow.
+<<endif>>You: They mean well, you know.
+You: But they don't understand me.
+You: Not like you do.
+You: ...
+You: 
+<<if $Jesper == true>>
+Jesper: Meow.
+<<endif>>
+<<if $cats == 3>>
+<<jump day4_morning2>>
+<<elseif $cats == 4 && $friend == 1>>
+<<jump day4_evenlater>>
+<<elseif $cats == 4 && $friend == 2>>
+<<jump day4_end>>
+<<endif>>
+===
+title: day4_evenlater
+---
+You: It's getting a bit crowded.
+You: I need more cat litter and maybe another scratching post.
+ -> Buy both.
+     <<set $money = $money- 120>>
+You: I think that should be enough for now.
+Doorbell: *dingdong*
+You: Oh that must be my friend!
+<<set $friend = $friend +1>>
+You: Hello! Great to see you!
+Friend: Hi! It's so good to see you too!
+You: Come in!
+Friend: Huh?
+Friend: Well, hello there, kittys.
+Friend: Since when do you have cats?
+You: 
+    -> Um... since three days ago?
+    -> Since Wednesday.
+    -> What are you talking about, I've always had them.
+        Friend: *laughs*
+        Friend: You are ridiculous. Have you been hiding them from me all this time?
+        You: You got me. I myself am secretly several cats in a trenchcoat.
+        Friend: *laughs*
+Friend: Well, they seem to be happy and you look much more relaxed, maybe this is exactly what you needed.
+You: Yes, maybe...
+Friend: Wanna order some pizza and continue our series?
+You: Sure!
+*Several hours later*
+Friend: I cannot believe he did that!
+You: Yes! Especially after what happenend the last time they met!
+Friend: She deserves better but well... 
+Friend: Oh, look at the time! I have to hurry if I want to catch the last bus.
+You: ...right. I almost forgot you don't live here.
+You: Get home safe!
+Friend: I will! Bye!
+You: ...
+You: Ugh, I miss them already.
+<<jump catsmeow94>>
+===
+title: day4_end
+---
+You: Maybe they are right.
+You: Maybe I need you.
+You: ...
+You: Maybe I just need more of you...
+You: ...
+You: ...good night, kittys.
+===

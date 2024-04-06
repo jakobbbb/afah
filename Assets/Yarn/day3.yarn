@@ -1,0 +1,76 @@
+title: day3_morning
+---
+<<declare $friend = 0>>
+You: Good morning, kittys!
+<<jump catsmeow93>>
+===
+title: day3_morning2
+---
+You: What a beautiful day!
+You: I think I'll go for a walk.
+You: ... after I feed you, of course.
+<<set $money = $money - (2*5)>>
+<<jump day3_later>>
+===
+
+title: day3_later
+---
+<<set $cats = $cats + 1>>
+You: Huh, guess I have three cats now.
+<<jump catsmeow93>>
+===
+title: catsmeow93
+---
+Koschka: Meow.
+<<if $Miette == true>>
+Miette: Meow.
+<<endif>>
+<<if $Dicki == true>>
+Dicki: Meow.
+<<endif>>
+<<if $Schinken == true>>
+Schinken: Meow.
+<<endif>>
+<<if $Peter == true>>
+MPeter: Meow.
+<<endif>>
+<<if $Luise == true>>
+Luise: Meow.
+<<endif>>
+<<if $Lotte == true>>
+Lotte: Meow.
+<<endif>>
+<<if $Kasimir == true>>
+Kasimir: Meow.
+<<endif>>
+<<if $Jesper == true>>
+Jesper: Meow.
+<<endif>>
+<<if $cats == 2>>
+<<jump day3_morning2>>
+<<elseif $cats == 3 && $friend == 0>>
+<<jump day3_evenlater>>
+<<elseif $cats == 3 && $friend == 1>>
+<<jump day3_end>>
+<<endif>>
+===
+title: day3_evenlater
+---
+<<set $friend = $friend + 1>>
+Phone: *ring* *ring*
+You: Oh, it's my friend!
+You: Hello?
+Friend: Hi!
+Friend: I just wanted to know if were still on for tomorrow?
+You: Sure!
+Friend: Great! See you soon!
+You: Bye!
+You: They are such a great friend.
+<<jump catsmeow93>>
+===
+title: day3_end
+---
+You: Not as great as you of course.
+You: ...
+You: Good night, kittys.
+===

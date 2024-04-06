@@ -6,6 +6,7 @@ You: What a beautiful day!
 You: I think I'll go for a walk.
 Koschka: Meow.
 You: ... after I feed you, of course.
+<<set $money = $money - (1*5)>>
 <<jump day2_later>>
 ===
 
@@ -14,26 +15,33 @@ title: day2_later
 <<set $cats = $cats + 1>>
 <<declare $parents = 0>>
 You: Huh, guess I have two cats now.
-<<jump catsmeow9>>
+<<jump catsmeow92>>
 ===
-title: catsmeow9
+title: catsmeow92
 ---
 Koschka: Meow.
 <<if $Miette == true>>
 Miette: Meow.
-<<elseif $Dicki == true>>
+<<endif>>
+<<if $Dicki == true>>
 Dicki: Meow.
-<<elseif $Schinken == true>>
+<<endif>>
+<<if $Schinken == true>>
 Schinken: Meow.
-<<elseif $Peter == true>>
+<<endif>>
+<<if $Peter == true>>
 MPeter: Meow.
-<<elseif $Luise == true>>
+<<endif>>
+<<if $Luise == true>>
 Luise: Meow.
-<<elseif $Lotte == true>>
+<<endif>>
+<<if $Lotte == true>>
 Lotte: Meow.
-<<elseif $Kasimir == true>>
+<<endif>>
+<<if $Kasimir == true>>
 Kasimir: Meow.
-<<elseif $Jesper == true>>
+<<endif>>end>
+<<if $Jesper == true>>
 Jesper: Meow.
 <<endif>>
 <<if $parents == 0>>
@@ -70,7 +78,7 @@ You: ...
 You: Sorry, I used you as an excuse to end the call.
 You: ...
 You: But I can't deal with them right now.
-<<jump catsmeow9>>
+<<jump catsmeow92>>
 ===
 title: day2_end
 ---

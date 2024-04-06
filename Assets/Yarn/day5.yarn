@@ -1,0 +1,98 @@
+title: day5_morning
+---
+You: ...
+You: ... morning, kittys.
+<<jump catsmeow95>>
+===
+title: day5_morning2
+---
+You: There's four of you now.
+You: ...
+You: But there is still some emptiness left to fill. 
+You: Maybe... I need more.
+You: I'll get just one more.
+You: After I feed you.
+<<set $money = $money - (4*5)>>
+<<jump day5_later>>
+===
+title: day5_later
+---
+<<set $cats = $cats + 1>>
+You: Five. That seems like a good number.
+<<jump catsmeow95>>
+===
+title: catsmeow95
+---
+Koschka: Meow.
+<<if $Miette == true>>
+Miette: Meow.
+<<endif>><<declare $friend = 0>>
+<<if $Dicki == true>>
+Dicki: Meow.
+<<endif>>
+<<if $Schinken == true>>
+Schinken: Meow.
+<<endif>>
+<<if $Peter == true>>
+MPeter: Meow.
+<<endif>>
+<<if $Luise == true>>
+Luise: Meow.
+<<endif>>
+<<if $Lotte == true>>
+Lotte: Meow.
+<<endif>>
+<<if $Kasimir == true>>
+Kasimir: Meow.
+<<endif>>
+<<if $Jesper == true>>
+Jesper: Meow.
+<<endif>>
+<<if $cats == 4>>
+<<jump day5_morning2>>
+<<elseif $cats == 5>>
+<<jump day5_evenlater>>
+<<endif>>
+===
+title: day5_evenlater
+---
+Phone: *ring* *ring*
+You: ... my parents. 
+You: Again.
+    -> Pick up phone. 
+        <<set $parents = $parents + 1>>
+            <<jump parentsphone2>>
+    -> Don't pick up phone.
+    <<jump day2_end>>
+===
+title: parentsphone2
+---
+You: Hello.
+Parents: Hello, sweetie.
+Parents: How are you?
+You: Good.
+You: And you?
+Parents: We are also good.
+Parents: How is your cat doing?
+You: Um, pretty good. 
+You: There's actually five of them now.
+Parents: Five? That's quite a lot of cats.
+Parents: Do they all get along?
+You: Yes.
+You: ...
+Parents: ...
+You: ...
+Parents: You know, we would love to...
+You: Oh sorry, I can't hear you anymore, the connection is breaking up. Bye.
+You: ...
+You: I'm a coward, aren't I?
+<<jump day5_end>>
+===
+title: day5_end
+---
+You: They mean well, you know.
+You: But they don't understand me.
+You: Not like you do.
+You: ...
+You: ...good night, kittys.
+===
