@@ -23,6 +23,7 @@ public class Cat : MonoBehaviour {
     private float m_StateTimer = 0f;
 
     private Transform m_NavTarget;
+    private GameObject m_ZoomAndIdle;
     private Transform m_ZoomAndIdleTarget;
     [SerializeField]
     private Transform m_NavBase;
@@ -30,6 +31,8 @@ public class Cat : MonoBehaviour {
 
     private float m_MaxVelocity = 4f;
     private Animator m_Animator;
+    [SerializeField]
+    private GameObject m_Empty;
 
     void Start() {
         Debug.Log("meow");
@@ -42,7 +45,9 @@ public class Cat : MonoBehaviour {
         m_Animator = GetComponentInChildren<Animator>();
         ApplyStateChange();
         m_Animator.SetFloat("Speed", UnityEngine.Random.Range(0.9f, 1.1f));
-        m_ZoomAndIdleTarget = new GameObject(name + "_zoom").AddComponent<Transform>();
+        m_ZoomAndIdle = Instantiate<GameObject>(m_Empty, Vector3.zero, Quaternion.identity);
+        m_ZoomAndIdleTarget = m_ZoomAndIdle.transform;
+        m_ZoomAndIdleTarget.gameObject.name = name + "_zoom";
         Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAA" + m_ZoomAndIdleTarget);
     }
 
@@ -71,7 +76,7 @@ public class Cat : MonoBehaviour {
             }
         }
         if (min_dist > 4f) {
-            ChooseZoomieTarget();
+            //ChooseZoomieTarget();  TODO
         }
     }
 

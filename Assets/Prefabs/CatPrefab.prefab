@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654e0f660c473011a86336bf6abab0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NavTarget: {fileID: 0}
   m_NavBase: {fileID: 289456963388446917}
+  m_Empty: {fileID: 5012794964523657263, guid: 265029cf5c45fd7bf814cc4ce842acfe, type: 3}
 --- !u!114 &1280700908975149369
 MonoBehaviour:
   m_ObjectHideFlags: 0
