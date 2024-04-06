@@ -1,6 +1,6 @@
 title: day10_morning
 ---
-<<declare $crows = 0>>
+<<set $crows = 0>>
 <<set $money = $money + 15>>
 <<if $Miette == true>>
 <<set $money = $money + 15>>

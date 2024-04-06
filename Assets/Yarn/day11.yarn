@@ -1,0 +1,80 @@
+title: day11_morning
+---
+<<set $crows = 0>>
+<<set $money = $money + 15>>
+<<if $Miette == true>>
+<<set $money = $money + 15>>
+<<endif>>
+<<if $Peter == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Luise == true || $Lotte == true>>
+<<set $money = $money + 8>>
+<<endif>>
+<<if $Lotte == true && $Luise == true>>
+<<set $money = $money + 16>>
+<<endif>>
+<<if $Kasimir == true>>
+<<set $money = $money + 6>>
+<<endif>>
+<<if $Albert == true>>
+<<set $money = $money + 11>>
+<<endif>>
+<<if $Harald == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Ringo == true>>have have 
+<<set $money = $money + 9>>
+<<endif>>
+<<if $TanteEdelgart == true>>
+<<set $money = $money + 13>>
+<<endif>>
+<<if $Toni == true>>
+<<set $money = $money + 7>>
+<<endif>>
+<<if $Egg == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Nullvektor == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $Jesper == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Nina == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Kaz == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Inej == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Matthias == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Wylan == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $crows == 1>>
+<<set $money = $money + 2>>
+<<elseif $crows == 2>>
+<<set $money = $money + 5>>
+<<elseif $crows == 3>>
+<<set $money = $money + 20>>
+<<elseif $crows == 4>>
+<<set $money = $money + 50>>
+<<elseif $crows == 5>>
+<<set $money = $money + 120>>
+<<elseif $crows == 6>>
+<<set $money = $money + 150>>
+<<set $heist = true >>
+<<endif>>
+Koschka: Good morning.
+You: I need to get more cats.
+Koschka: Why tho?
+You: Do you not want me to be happy?
+You: And prove to everyone that I can actually do thing?
+Koschka: And you think that's the way to do it?
+You: Yes.
+Koschka: Okay.
