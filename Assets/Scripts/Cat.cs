@@ -22,7 +22,8 @@ public class Cat : MonoBehaviour {
 
     void Start() {
         Debug.Log("meow");
-        
+        m_MaxVelocity = UnityEngine.Random.Range(2f, 4f);
+        CatManager.Instance.RegisterCat(this);
     }
 
     void Update() {
@@ -35,7 +36,7 @@ public class Cat : MonoBehaviour {
 
     void FixedUpdate() {
         Unstuck();
-        AIMove();
+        MoveTowardsGoal();
         UpdateClosest();
         Unstuck();
 
@@ -71,13 +72,36 @@ public class Cat : MonoBehaviour {
         transform.Translate(dir * Time.fixedDeltaTime);
     }
 
-    void AIMove() {
+    Vector2 AvoidOthers() {
         Vector2 move = Vector2.zero;
+        foreach (Cat cat in CatManager.Instance.GetCats()) {
+            var delta = transform.position - cat.transform.position;
+            var dist = delta.magnitude;
+            if (dist < 0.6f) {
+                move += (Vector2)delta.normalized;
+            }
+        }
+        if (move.magnitude < 0.1f) {  // hysterese let's go
+            return Vector2.zero;
+        }
+        return 0.05f * move.normalized;
+    }
+
+    void MoveTowardsGoal() {
+        Vector2 move = AvoidOthers();
         Vector2 delta = m_NavTarget.position - m_NavBase.position;
         var velocity = m_MaxVelocity;
         var delta_norm = delta.normalized;
-        var delta_x = velocity * new Vector2(delta_norm.x, 0) * Time.fixedDeltaTime;
-        var delta_y = velocity * new Vector2(0, delta_norm.y) * Time.fixedDeltaTime;
+        var delta_x = velocity * new Vector2(delta_norm.x + move.x, 0) * Time.fixedDeltaTime;
+        var delta_y = velocity * new Vector2(0, delta_norm.y + move.y) * Time.fixedDeltaTime;
+
+        var scale = transform.localScale;
+        if (delta_x.x > 0f && scale.x < 0f) {
+            scale.x = -scale.x;
+        } else if (delta_x.x < 0f && scale.x > 0f) {
+            scale.x = -scale.x;
+        }
+        transform.localScale = scale;
 
         if (delta.magnitude < 0.1f) {
             // Target reached
@@ -86,13 +110,9 @@ public class Cat : MonoBehaviour {
         
         if (CatManager.Instance.IsWalkable((Vector2)m_NavBase.position + delta_x)) {
             move += delta_x;
-        } else {
-            Debug.Log("uwu");
         }
         if (CatManager.Instance.IsWalkable((Vector2)m_NavBase.position + delta_y)) {
             move += delta_y;
-        } else {
-            Debug.Log("owo");
         }
 
         // jump

@@ -11,18 +11,26 @@ public class CatManager : MonoBehaviour {
 
     private List<BoxCollider2D> m_WalkableColliders = new();
 
+    private List<Cat> m_Cats = new();
+
     public List<BoxCollider2D> GetWalkable() {
         return m_WalkableColliders;
     }
 
-    private void Start() {
+    public List<Cat> GetCats() {
+        return m_Cats;
+    }
+
+    private void Awake() {
         if (Instance == null) {
             Instance = this;
             DontDestroyOnLoad(this);
         } else {
             Destroy(this);
         }
+    }
 
+    private void Start() {
         foreach (var collider in FindObjectsByType<BoxCollider2D>(FindObjectsSortMode.None)) {
             if (collider.tag.Equals("CatWalkable")) {
                 m_WalkableColliders.Add(collider);
@@ -39,6 +47,10 @@ public class CatManager : MonoBehaviour {
             }
         }
         return false;
+    }
+
+    public void RegisterCat(Cat cat) {
+        m_Cats.Add(cat);
     }
 
     
