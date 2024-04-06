@@ -212,7 +212,15 @@ public class Cat : MonoBehaviour {
 
         if (delta.magnitude < 0.1f) {
             // Target reached
+            m_Animator.SetTrigger("Idle");
             return;
+        } else {
+            if (m_State == CatState.WALKING_TO_TARGET) {
+                m_Animator.SetTrigger("Walk");
+            } else if (m_State == CatState.ZOOMIES) {
+                m_Animator.SetTrigger("Jump");
+            }
+            
         }
         
         if (CatManager.Instance.IsWalkable((Vector2)m_NavBase.position + delta_x)) {
@@ -235,7 +243,8 @@ public class Cat : MonoBehaviour {
                     continue;
                 }
 
-                if (Math.Abs(current_to_jump.x) < 55551f && jump_to_target.magnitude < delta.magnitude) {
+                if ((Math.Abs(current_to_jump.x) < 0.5f)
+                        && jump_to_target.magnitude < delta.magnitude) {
                     best_jump = current_to_jump;
                     best_jump_gain = jump_gain;
                 }
