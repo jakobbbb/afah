@@ -44,7 +44,7 @@ title: day9_morning
 <<if $Nina == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
-<<if $Kaz == true>>0
+<<if $Kaz == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $Inej == true>>
