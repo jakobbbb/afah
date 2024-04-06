@@ -25,9 +25,10 @@ public class Cat : MonoBehaviour {
     private Transform m_NavTarget;
     [SerializeField]
     private Transform m_NavBase;
-    private GameObject m_Renderer;
+    private GameObject m_FlippingThing;
 
     private float m_MaxVelocity = 4f;
+    private Animator m_Animator;
 
     void Start() {
         Debug.Log("meow");
@@ -35,8 +36,11 @@ public class Cat : MonoBehaviour {
         CatManager.Instance.RegisterCat(this);
         m_StateChangeRollCooldown = UnityEngine.Random.Range(0f, 5f);
         m_JumpCooldown = UnityEngine.Random.Range(0f, 0.5f);
-        m_Renderer = this.gameObject;
+        m_FlippingThing = this.gameObject;
         ChooseFoodTarget();
+        m_Animator = GetComponentInChildren<Animator>();
+        ApplyStateChange();
+        m_Animator.SetFloat("Speed", UnityEngine.Random.Range(0.9f, 1.1f));
     }
 
     void Update() {
@@ -112,6 +116,15 @@ public class Cat : MonoBehaviour {
             m_MaxVelocity /= 4f;
         }
 
+        switch(new_state) {
+            case (CatState.WALKING_TO_TARGET):
+                m_Animator.SetTrigger("Walk");
+                break;
+            case (CatState.ZOOMIES):
+                m_Animator.SetTrigger("Jump");
+                break;
+        }
+
         transform.localScale = scale;
     }
 
@@ -124,7 +137,7 @@ public class Cat : MonoBehaviour {
         if ((m_State == CatState.SLEEPING || m_State == CatState.ZOOMIES) && (Util.Roll(5) || m_StateTimer > 10.0f)) {
             m_State = CatState.WALKING_TO_TARGET;
         }
-        if (Util.Roll(1)) {
+        if (Util.Roll(1)) {  // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
             m_State = CatState.ZOOMIES;
             m_StateTimer = 0f;
         }
@@ -189,13 +202,13 @@ public class Cat : MonoBehaviour {
         var delta_x = velocity * new Vector2(delta_norm.x + move.x, 0) * Time.fixedDeltaTime;
         var delta_y = velocity * new Vector2(0, delta_norm.y + move.y) * Time.fixedDeltaTime;
 
-        var scale = m_Renderer.transform.localScale;
+        var scale = m_FlippingThing.transform.localScale;
         if (delta_x.x > 0f && scale.x < 0f) {
             scale.x = -scale.x;
         } else if (delta_x.x < 0f && scale.x > 0f) {
             scale.x = -scale.x;
         }
-        m_Renderer.transform.localScale = scale;
+        m_FlippingThing.transform.localScale = scale;
 
         if (delta.magnitude < 0.1f) {
             // Target reached
