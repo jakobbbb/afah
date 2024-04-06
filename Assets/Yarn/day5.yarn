@@ -26,7 +26,7 @@ title: catsmeow95
 Koschka: Meow.
 <<if $Miette == true>>
 Miette: Meow.
-<<endif>><<$friend = 0>>
+<<endif>>
 <<if $Dicki == true>>
 Dicki: Meow.
 <<endif>>
@@ -95,5 +95,4 @@ You: But they don't understand me.
 You: Not like you do.
 You: ...
 You: ...good night, kittys.
-<<goodnight>>
 ===

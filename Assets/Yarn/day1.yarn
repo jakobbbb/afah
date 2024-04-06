@@ -93,5 +93,5 @@ You: ...
 <<endif>>
 You: We are going to have a good time, you and me, kitty.
 Koschka: Meow.
-<<goodnight>>
+<<jump day2_morning>>
 ===

@@ -55,6 +55,7 @@ Jesper: Meow.
 <<endif>>
 ===
 title: day3_evenlater
+position: 43,95
 ---
 <<set $friend = $friend + 1>>
 Phone: *ring* *ring*
@@ -69,9 +70,10 @@ You: They are such a great friend.
 <<jump catsmeow93>>
 ===
 title: day3_end
+position: 74,248
 ---
 You: Not as great as you of course.
 You: ...
 You: Good night, kittys.
-<<goodnight>>
+<<jump day4_morning>>
 ===

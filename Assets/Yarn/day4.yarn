@@ -23,7 +23,7 @@ title: catsmeow94
 Koschka: Meow.
 <<if $Miette == true>>
 Miette: Meow.
-<<endif>><<$friend = 0>>
+<<endif>>
 <<if $Dicki == true>>
 Dicki: Meow.
 <<endif>>
@@ -105,5 +105,5 @@ You: ...
 You: Maybe I just need more of you...
 You: ...
 You: ...good night, kittys.
-<<goodnight>>
+<<jump day5_morning>>
 ===

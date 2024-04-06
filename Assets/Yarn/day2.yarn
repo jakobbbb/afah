@@ -83,5 +83,5 @@ You: But I can't deal with them right now.
 title: day2_end
 ---
 You: Good night, kittys.
-<<goodnight>>
+<<jump day3_morning>>
 ===
