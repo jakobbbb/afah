@@ -1,0 +1,96 @@
+title: day1_morning
+---
+<<declare $cats = 0>>
+<<declare $money = 500>>
+You: Ugh.
+You: Another morning.
+You: Another workday.
+You: Great.
+You: ...
+You: Guess I'll get up now.
+<<jump day1_later>>
+===
+
+title: day1_later
+---
+<<set $cats = $cats + 1>>
+You: Huh, guess I have a cat now.
+Koschka: Meow.
+You: I should probably call my boss and tell her that I can't work today.
+You: And also the rest of the week...
+    -> Phone boss.
+        <<set $boss = true>>
+        Boss: Hello?
+        You: Um, hello. I can't work today.
+        You: *coughs*
+        You: I'm sick.
+        You: I will stay home for a few days.
+        Boss: ... okay.
+        Boss: But you will have to be here on Monday.
+        You: Sure.
+        You: Bye.
+        You: ...
+        You: Now back to the cat.
+    -> Don't phone boss.
+        <<set $boss = false>>
+        You: There are more important things to do right now.
+You: What do cats need?
+Koschka: Meow.
+<<jump buying1>>
+===
+title: buying1
+---
+<<declare $litterbox = 0>>
+<<declare $post = 0>>
+<<declare $food = 0>>
+<<if $post == 0 && $litterbox == 0 && $food == 0>>
+You: I think I'll have to buy... 
+<<else>>
+You: And... 
+<<endif>>
+    -> A litter box. <<if $litterbox == 0>>
+        <<set $money= $money - 20>>
+        <<set $litterbox = $litterbox + 1>>
+            <<jump buying1>>
+    -> Cat food. <<if $food == 0>>
+        <<set $money= $money - 5>>
+        <<set $food = $food + 1>>
+            <<jump buying1>>
+    -> A scratching post. <<if $post == 0>>
+        <<set $money= $money - 100>>
+        <<set $post = $post + 1>>
+            <<jump buying1>>
+    -> Nothing actually. <<if $post == 1 && $litterbox == 1 && $food == 1>>
+<<jump day1_evenlater>>
+===
+
+title: day1_evenlater
+---
+You: Nice.
+You: Do you like it?
+Koschka: Meow.
+You: Good kitty.
+<<if $boss == false>>
+    Phone: *ring* *ring*
+    You: Oh no. It's my boss.
+    You: Hello?
+    Boss: Where are you??
+    You: Um.
+    You: At home.
+    You: *coughs*
+    You: I'm sick.
+    You: I'll have to stay home for a few days.
+    Boss: And you couldn't phone in and tell me that??
+    Boss: Ugh.
+    Boss: Fine.
+    Boss: But be here and on time on Monday or there will be consequences.
+    You: Yes, sorry, I will be there.
+    Boss: Good.
+    You: Bye.
+    You: ...
+<<else>>
+You: ...
+<<endif>>
+You: We are going to have a good time, you and me, kitty.
+Koschka: Meow.
+===

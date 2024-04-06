@@ -1,0 +1,78 @@
+title: day2_morning
+---
+You: Good morning, kitty!
+Koschka: Meow.
+You: What a beautiful day!
+You: I think I'll go for a walk.
+Koschka: Meow.
+You: ... after I feed you, of course.
+<<jump day2_later>>
+===
+
+title: day2_later
+---
+<<set $cats = $cats + 1>>
+<<declare $parents = 0>>
+You: Huh, guess I have two cats now.
+<<jump catsmeow9>>
+===
+title: catsmeow9
+---
+Koschka: Meow.
+<<if $Miette == true>>
+Miette: Meow.
+<<elseif $Dicki == true>>
+Dicki: Meow.
+<<elseif $Schinken == true>>
+Schinken: Meow.
+<<elseif $Peter == true>>
+MPeter: Meow.
+<<elseif $Luise == true>>
+Luise: Meow.
+<<elseif $Lotte == true>>
+Lotte: Meow.
+<<elseif $Kasimir == true>>
+Kasimir: Meow.
+<<elseif $Jesper == true>>
+Jesper: Meow.
+<<endif>>
+<<if $parents == 0>>
+<<jump day2_evenlater>>
+<<else>>
+<<jump day2_end>>
+<<endif>>
+===
+title: day2_evenlater
+---
+Phone: *ring* *ring*
+You: Huh?
+You: My parents are calling me.
+    -> Pick up phone. 
+        <<set $parents = $parents + 1>>
+            <<jump parentsphone1>>
+    -> Don't pick up phone.
+    <<jump day2_end>>
+===
+title: parentsphone1
+---
+You: Hello.
+Parents: Hello, sweetie.
+Parents: How are you?
+You: Good.
+You: And you?
+Parents: We are also good.
+You: ...
+Parents: ...
+You: ...
+Parents: We wanted to ask you...
+You: Sorry, the cat's trying to throw up on the carpet, gotta go. Bye.
+You: ...
+You: Sorry, I used you as an excuse to end the call.
+You: ...
+You: But I can't deal with them right now.
+<<jump catsmeow9>>
+===
+title: day2_end
+---
+You: Good night, kittys.
+===
