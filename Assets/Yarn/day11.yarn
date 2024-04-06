@@ -78,3 +78,58 @@ You: And prove to everyone that I can actually do thing?
 Koschka: And you think that's the way to do it?
 You: Yes.
 Koschka: Okay.
+You: I knew you would understand me.
+Koschka: I just don't like to argue.
+Koschka: Especially with the person who can open the food cans.
+You: Oh you are right, here's your food.
+<<set $money = $money - (15*5)>>
+<<jump day11_later>>
+===
+title: day11_later
+---
+You: Mooooore cats.
+Doorbell: *dingdong*
+You: Oh no, that's the neighbor again.
+Koschka: Correct.
+You: I will just ignore them.
+You: ...
+Koschka: Well here comes someone you can't ignore.
+Doorbell: *dingdong* 
+You: What do you mean?
+Koschka: Listen.
+Neighbor: I already tried that. They won't answer the door. Just like yesterday.
+Friend: That is concerning!
+Friend: *knocks*
+Friend: It's me!
+Friend: Please open the door!
+You: Oh no.
+Friend: *knocks*
+Friend: Please!
+Friend: I am so sorry.
+Friend: I was a real ass to you.
+Friend: I was just so overwhelmed.
+Friend: And hurt. Even though I know that you are not doing that stuff on purpose.
+Friend: You need my help and not me being angry at you for being unwell.
+Friend: Please answer me!
+Neighbor: And me! These cats are keeping me up at night!
+Friend: ...really? Can you not just use earplugs?
+Neighbor: I have sensitive ears!
+Friend: *knocks*
+Friend: Please, are you okay?
+You: Um...
+-> I'm fine.
+-> Go away.
+-> I don't have problems sleeping.
+    Neighbor: I know, I can hear you snoring every night.
+Neighbor: At least they are alive.
+Friend: Can you please open the door?
+You: ...
+You: No.
+Friend: *sighs* okay.
+Friend: But know that I am always there when you need help.
+Friend: And I worry about you.
+Neighbor: And I worry about my sleep.
+You: I cannot anymore.
+You: I'm going to bed.
+Koschka: Whatever makes you happy.
+===
