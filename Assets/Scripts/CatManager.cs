@@ -11,6 +11,9 @@ public class CatManager : MonoBehaviour {
 
     private List<BoxCollider2D> m_WalkableColliders = new();
 
+    public List<BoxCollider2D> GetWalkable() {
+        return m_WalkableColliders;
+    }
 
     private void Start() {
         if (Instance == null) {
