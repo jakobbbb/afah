@@ -15,6 +15,7 @@ public class Cat : MonoBehaviour {
     }
 
     private CatState m_State = CatState.WALKING_TO_TARGET;
+    private CatState m_PrevState = CatState.WALKING_TO_TARGET;
 
     private float m_JumpCooldown;
     private float m_StateChangeRollCooldown = 0f;
@@ -39,10 +40,28 @@ public class Cat : MonoBehaviour {
 
     void Update() {
     }
+    void ChooseZoomieTarget() {
+        var n = CatManager.Instance.GetWalkable().Count;
+        var i = UnityEngine.Random.Range(0, n);
+        var c = CatManager.Instance.GetWalkable()[i];
+        m_NavTarget = c.transform;
+    }
+    void ChooseFoodTarget() {
+        var foods = FindObjectsByType<Food>(FindObjectsSortMode.None);
+        float min_dist = 9999999f;
+        foreach (var f in foods) {
+            var dist = (f.transform.position - m_NavBase.transform.position).magnitude;
+            if (dist < min_dist) {
+                min_dist = dist;
+                m_NavTarget = f.transform;
+            }
+        }
+    }
 
     void FixedUpdate() {
         Unstuck();
         if (m_StateChangeRollCooldown < 0f) {
+            m_PrevState = m_State;
             if (RollForStateChange()) {
                 ApplyStateChange();
             }
@@ -52,9 +71,14 @@ public class Cat : MonoBehaviour {
         
         switch (m_State) {
             case CatState.WALKING_TO_TARGET:
+                ChooseFoodTarget();
                 MoveTowardsGoal();
                 break;
             case CatState.SLEEPING:
+                break;
+            case CatState.ZOOMIES:
+                ChooseZoomieTarget();
+                MoveTowardsGoal();
                 break;
         }
         UpdateClosest();
@@ -71,10 +95,20 @@ public class Cat : MonoBehaviour {
 
     void ApplyStateChange() {
         var new_state = m_State;
+        var prev_state = m_PrevState;
         var scale = transform.localScale;
         
-        var fy = (new_state == CatState.SLEEPING) ? 0.25f : 4.0f;
-        scale.y = fy * scale.y;
+        if (new_state == CatState.SLEEPING) {
+            scale.y = 0.25f * scale.y;
+        } else if (prev_state  == CatState.SLEEPING){
+            scale.y = 4f * scale.y;
+        }
+
+        if (new_state == CatState.ZOOMIES) {
+            m_MaxVelocity *= 4f;
+        } else if (prev_state == CatState.ZOOMIES) {
+            m_MaxVelocity /= 4f;
+        }
 
         transform.localScale = scale;
     }
@@ -85,8 +119,12 @@ public class Cat : MonoBehaviour {
             m_StateTimer = 0f;
             m_State = CatState.SLEEPING;
         }
-        if (m_State == CatState.SLEEPING && (Util.Roll(5) || m_StateTimer > 10.0f)) {
+        if ((m_State == CatState.SLEEPING || m_State == CatState.ZOOMIES) && (Util.Roll(5) || m_StateTimer > 10.0f)) {
             m_State = CatState.WALKING_TO_TARGET;
+        }
+        if (Util.Roll(1)) {
+            m_State = CatState.ZOOMIES;
+            m_StateTimer = 0f;
         }
 
         bool changed = old_state != m_State;
@@ -123,11 +161,15 @@ public class Cat : MonoBehaviour {
     }
 
     Vector2 AvoidOthers() {
+        float max_dist_to_others = 0.6f;
+        if (m_State == CatState.ZOOMIES) {
+            max_dist_to_others = 2f;
+        }
         Vector2 move = Vector2.zero;
         foreach (Cat cat in CatManager.Instance.GetCats()) {
             var delta = transform.position - cat.transform.position;
             var dist = delta.magnitude;
-            if (dist < 0.6f) {
+            if (dist < max_dist_to_others) {
                 move += (Vector2)delta.normalized;
             }
         }
