@@ -23,6 +23,7 @@ public class Cat : MonoBehaviour {
     private float m_StateTimer = 0f;
 
     private Transform m_NavTarget;
+    private Transform m_ZoomAndIdleTarget;
     [SerializeField]
     private Transform m_NavBase;
     private GameObject m_FlippingThing;
@@ -41,6 +42,7 @@ public class Cat : MonoBehaviour {
         m_Animator = GetComponentInChildren<Animator>();
         ApplyStateChange();
         m_Animator.SetFloat("Speed", UnityEngine.Random.Range(0.9f, 1.1f));
+        m_ZoomAndIdleTarget = new GameObject(name + "_zoom").transform;
     }
 
     void Update() {
@@ -49,7 +51,10 @@ public class Cat : MonoBehaviour {
         var n = CatManager.Instance.GetWalkable().Count;
         var i = UnityEngine.Random.Range(0, n);
         var c = CatManager.Instance.GetWalkable()[i];
-        m_NavTarget = c.transform;
+        var x = UnityEngine.Random.Range(c.bounds.min.x,c.bounds.max.x);
+        var y = UnityEngine.Random.Range(c.bounds.min.y,c.bounds.max.y);
+        m_ZoomAndIdleTarget.position = new Vector3(x, y, m_ZoomAndIdleTarget.position.z);
+        m_NavTarget = m_ZoomAndIdleTarget;
     }
     void ChooseFoodTarget() {
         var foods = FindObjectsByType<Food>(FindObjectsSortMode.None);
