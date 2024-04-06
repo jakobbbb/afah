@@ -63,7 +63,7 @@ You: Again.
         <<set $parents = $parents + 1>>
             <<jump parentsphone2>>
     -> Don't pick up phone.
-    <<jump day2_end>>
+    <<jump day5_end>>
 ===
 title: parentsphone2
 ---
