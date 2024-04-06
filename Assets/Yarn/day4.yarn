@@ -31,7 +31,7 @@ Dicki: Meow.
 Schinken: Meow.
 <<endif>>
 <<if $Peter == true>>
-MPeter: Meow.
+Peter: Meow.
 <<endif>>
 <<if $Luise == true>>
 Luise: Meow.

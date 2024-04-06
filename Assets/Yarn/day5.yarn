@@ -59,7 +59,7 @@ title: day5_evenlater
 Phone: *ring* *ring*
 You: ... my parents. 
 You: Again.
-    -> Pick up phone. 
+    -> Pick up phone.
         <<set $parents = $parents + 1>>
             <<jump parentsphone2>>
     -> Don't pick up phone.

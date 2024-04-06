@@ -1,0 +1,139 @@
+title: day9_morning
+---
+<<declare $crows = 0>>
+<<set $money = $money + 15>>
+<<if $Miette == true>>
+<<set $money = $money + 15>>
+<<endif>>
+<<if $Peter == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Luise == true || $Lotte == true>>
+<<set $money = $money + 8>>
+<<endif>>
+<<if $Lotte == true && $Luise == true>>
+<<set $money = $money + 16>>
+<<endif>>
+<<if $Kasimir == true>>
+<<set $money = $money + 6>>
+<<endif>>
+<<if $Albert == true>>
+<<set $money = $money + 11>>
+<<endif>>
+<<if $Harald == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Ringo == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $TanteEdelgart == true>>
+<<set $money = $money + 13>>
+<<endif>>
+<<if $Toni == true>>
+<<set $money = $money + 7>>
+<<endif>>
+<<if $Egg == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Nullvektor == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $Jesper == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Nina == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Kaz == true>>0
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Inej == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Matthias == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Wylan == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $crows == 1>>
+<<set $money = $money + 2>>
+<<elseif $crows == 2>>
+<<set $money = $money + 5>>
+<<elseif $crows == 3>>
+<<set $money = $money + 20>>
+<<elseif $crows == 4>>
+<<set $money = $money + 50>>
+<<elseif $crows == 5>>
+<<set $money = $money + 120>>
+<<elseif $crows == 6>>
+<<set $money = $money + 150>>
+<<set $heist = true >>
+<<endif>>
+You: Oh my kittys.
+You: How ever shall I afford to feed you?
+You: Huh?
+You: Where did all that money come from?
+You: Well, who cares! 
+You: Come get your food, kittys!
+<<set $money = $money - (11*5)>>
+<<jump day9_later>>
+===
+title: day9_later
+---
+You: *sings* I love cats, I love every kind of cat!
+You: And you are the only ones that love me!
+Phone: *ring* *ring*
+You: Oh no, it's my friend again.
+You: I am still not ready.
+You: I won't answer the phone.
+You: ...
+You: ...
+You: Finally, it stopped ringing.
+Phone: *ring* *ring*
+You: Ugh. 
+You: My parents.
+    -> Pick up phone.
+        <<set $parents = $parents + 1>>
+            <<jump parentsphone3>>
+    -> Don't pick up phone.
+    <<jump day9_end>>
+===
+title: parentsphone3
+---
+You: Hello.
+Parents: Hello, sweetie.
+Parents: How are you?
+You: Good.
+You: And you?
+Parents: We are also good.
+Parents: You know we would love to see you again sometime.
+Parents: And before you hang up again, you do not have to decide right now.
+Parents: Just think about it okay?
+You: Um, okay I will.
+Parents: Great! Have a good day! Love you!
+You: ...
+<<jump day9_end>>
+===
+title: day9_end
+---
+You: They try so hard.
+You: Everyone tries so hard.
+You: Except me.
+You: ...
+You: I cannot disappoint them.
+You: I will get better. 
+You: And happier.
+Koschka: Sure.
+You: Huh?...
+You: There it was again.
+You: Am I having auditory hallucinations?
+Koschka: Might be.
+You: Yes, you're right. 
+You: It's probably because I am so tired.
+You: I'll go to bed now.
+You: Good night, kittys.
+Koschka: ...
+Koschka: Someone's losing their damn mind.
+Koschka: Anyways, off to work.
+===

@@ -1,0 +1,28 @@
+title: day8_morning
+---
+You: I do not have much time right now, kittys.
+You: I will quickly give you food and then I have to pursue my happiness.
+<<set $money = $money - (9*5)>>
+<<jump day8_later>>
+===
+title: day8_later
+---
+You: Very good.
+You: It's all coming together.
+You: Soon I will be truly happy.
+Phone: *ring* *ring*
+You: Huh? 
+You: It's my friend.
+You: ... they probably want to yell at me again because I am still not happy enough.
+You: ...
+You: I won't answer the phone.
+You: I'll need more litter soon.
+You: And cat food.
+You: How will I afford it?
+You: I am so tired.
+You: I'll go to bed now, kittys.
+You: Tomorrow might look nicer.
+You: Good night, kittys.
+Koschka: ...
+Koschka: Time to go to work.
+==
