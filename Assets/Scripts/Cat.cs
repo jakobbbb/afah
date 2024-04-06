@@ -9,9 +9,14 @@ public class Cat : MonoBehaviour {
     private Collider2D m_CurrentCollider;
     public enum CatState {
         WALKING_TO_TARGET,
+        SLEEPING,
     }
 
+    private CatState m_State = CatState.WALKING_TO_TARGET;
+
     private float m_JumpCooldown;
+    private float m_StateChangeRollCooldown = 0f;
+    private float m_SleepTime = 0f;
 
     [SerializeField]
     private Transform m_NavTarget;
@@ -24,23 +29,60 @@ public class Cat : MonoBehaviour {
         Debug.Log("meow");
         m_MaxVelocity = UnityEngine.Random.Range(2f, 4f);
         CatManager.Instance.RegisterCat(this);
+        m_StateChangeRollCooldown = UnityEngine.Random.Range(0f, 5f);
+        m_JumpCooldown = UnityEngine.Random.Range(0f, 0.5f);
     }
 
     void Update() {
-        if (true || Input.GetKeyDown(KeyCode.Space)) {
-            var world = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            world.z = m_NavTarget.position.z;
-            m_NavTarget.position = world;
-        }
     }
 
     void FixedUpdate() {
         Unstuck();
-        MoveTowardsGoal();
+        if (m_StateChangeRollCooldown < 0f) {
+            if (RollForStateChange()) {
+                ApplyStateChange();
+            }
+            Debug.Log("sate");
+            m_StateChangeRollCooldown = 5f;
+        }
+        
+        switch (m_State) {
+            case CatState.WALKING_TO_TARGET:
+                MoveTowardsGoal();
+                break;
+            case CatState.SLEEPING:
+            break;
+        }
         UpdateClosest();
         Unstuck();
 
         m_JumpCooldown -= Time.fixedDeltaTime;
+        m_StateChangeRollCooldown -= Time.fixedDeltaTime;
+        m_SleepTime += Time.fixedDeltaTime;
+    }
+
+    void ApplyStateChange() {
+        var new_state = m_State;
+        var scale = transform.localScale;
+        
+        var fy = (new_state == CatState.SLEEPING) ? 0.25f : 4.0f;
+        scale.y = fy * scale.y;
+
+        transform.localScale = scale;
+    }
+
+    bool RollForStateChange() {
+        var old_state = m_State;
+        if (m_State == CatState.WALKING_TO_TARGET && Util.Roll(3)) {
+            m_SleepTime = 0f;
+            m_State = CatState.SLEEPING;
+        }
+        if (m_State == CatState.SLEEPING && (Util.Roll(5) || m_SleepTime > 10.0f)) {
+            m_State = CatState.WALKING_TO_TARGET;
+        }
+
+        bool changed = old_state != m_State;
+        return changed;
     }
 
     void UpdateClosest() {
