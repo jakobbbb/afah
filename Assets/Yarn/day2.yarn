@@ -1,5 +1,6 @@
 title: day2_morning
 ---
+<<declare $friend = 0>>
 You: Good morning, kitty!
 Koschka: Meow.
 You: What a beautiful day!
@@ -50,6 +51,8 @@ Jesper: Meow.
 <<jump day2_end>>
 <<endif>>
 ===
+title: day2_evenlater
+---
 <<set $friend = $friend + 1>>
 Phone: *ring* *ring*
 You: Oh, it's my friend!
@@ -66,7 +69,6 @@ title: parentsphone1
 You: Hello.
 Parents: Hello, sweetie.
 Parents: How are you?
-<<set $friend = $friend + 1>>
 Phone: *ring* *ring*
 You: Oh, it's my friend!
 You: Good.
