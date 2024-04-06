@@ -40,7 +40,7 @@ Lotte: Meow.
 <<endif>>
 <<if $Kasimir == true>>
 Kasimir: Meow.
-<<endif>>end>
+<<endif>>
 <<if $Jesper == true>>
 Jesper: Meow.
 <<endif>>
@@ -57,9 +57,9 @@ You: Huh?
 You: My parents are calling me.
     -> Pick up phone. 
         <<set $parents = $parents + 1>>
-            <<jump parentsphone1>>
+        <<jump parentsphone1>>
     -> Don't pick up phone.
-    <<jump day2_end>>
+        <<jump day2_end>>
 ===
 title: parentsphone1
 ---
@@ -83,4 +83,5 @@ You: But I can't deal with them right now.
 title: day2_end
 ---
 You: Good night, kittys.
+<<goodnight>>
 ===

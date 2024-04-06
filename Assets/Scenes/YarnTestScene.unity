@@ -377,6 +377,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4652665519208520050, guid: 032ea3eac0327bec3954a891bfe7c151, type: 3}
+      propertyPath: m_Day
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7854729712115231579, guid: 032ea3eac0327bec3954a891bfe7c151, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
