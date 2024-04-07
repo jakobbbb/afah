@@ -121,7 +121,7 @@ Parents: We are also good.
 <<if $think == true>>
 Parents: Did you have time to think about us seeing each other again?
 You: Not yet, sorry.
-Parents: No worries! Anyways...
+Parents: No worries! Anyways... letter
 <<else>>
 Parents: Anyways...
 <<endif>>
