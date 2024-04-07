@@ -82,6 +82,9 @@ public class CatManager : MonoBehaviour {
             // spawn two after day 6
             SpawnCatSingle();
         }
+        if (m_Cats.Count >= 15) {
+            SpawnCatSingle();
+        }
     }
     private void SpawnCatSingle() {
         List<GameObject> prefabs = null;
