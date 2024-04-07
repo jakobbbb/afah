@@ -23,7 +23,7 @@ You: I should probably call my boss and tell her that I can't work today.
 You: And also the rest of the week...
     -> Phone boss.
         <<set $boss = true>>
-        Boss: Hello?
+        Boss: [playsound Boss_annoyed]Hello?
         You: Um, hello. I can't work today.
         You: *coughs*
         You: I'm sick.
