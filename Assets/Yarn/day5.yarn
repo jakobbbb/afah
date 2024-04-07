@@ -1,5 +1,6 @@
 title: day5_morning
 ---
+<<set $day = "Sunday">>
 You: ...
 You: ... morning, kittys.
 <<jump catsmeow95>>

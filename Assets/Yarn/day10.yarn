@@ -1,5 +1,6 @@
 title: day10_morning
 ---
+<<set $day = "Friday">>
 <<set $crows = 0>>
 <<set $money = $money + 15>>
 <<if $Miette == true>>

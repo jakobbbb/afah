@@ -1,5 +1,6 @@
 title: day2_morning
 ---
+<<set $day = "Thursday">>
 <<declare $friend = 0>>
 You: Good morning, kitty!
 Koschka: Meow.

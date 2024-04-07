@@ -1,5 +1,6 @@
 title: day7_morning
 ---
+<<set $day = "Tuesday">>
 <<if $unemployment == true >>
 You: Another beautiful day to get even more cats!
 You: Because as you know, kittys, happiness is measured in cats!
