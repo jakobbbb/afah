@@ -80,7 +80,7 @@ You: Yes.
 Koschka: Okay.
 You: I knew you would understand me.
 Koschka: I just don't like to argue.
-Koschka: Especially with the person who can open the food cans.
+Koschka: Especially with the person who feeds me.
 You: Oh you are right, here's your food.
 <<set $money = $money - (15*5)>>
 <<jump day11_later>>
@@ -93,7 +93,7 @@ You: Oh no, that's the neighbor again.
 Koschka: Correct.
 You: I will just ignore them.
 You: ...
-Koschka: Well here comes someone you can't ignore.
+Koschka: Well here comes someone you can't just ignore.
 Doorbell: *dingdong* 
 You: What do you mean?
 Koschka: Listen.
@@ -106,13 +106,16 @@ You: Oh no.
 Friend: *knocks*
 Friend: Please!
 Friend: I am so sorry.
-Friend: I was a real ass to you.
+Friend: I'm sorry I yelled at you
+Friend: I was a real ass.
+Friend: And I am really sorry for that.
 Friend: I was just so overwhelmed.
 Friend: And hurt. Even though I know that you are not doing that stuff on purpose.
 Friend: You need my help and not me being angry at you for being unwell.
 Friend: Please answer me!
 Neighbor: And me! These cats are keeping me up at night!
-Friend: ...really? Can you not just use earplugs?
+Friend: ...really? I am trying to have a heartfelt conversation here. 
+Frien: And also can you not just use earplugs?
 Neighbor: I have sensitive ears!
 Friend: *knocks*
 Friend: Please, are you okay?
@@ -121,12 +124,12 @@ You: Um...
 -> Go away.
 -> I don't have problems sleeping.
     Neighbor: I know, I can hear you snoring every night.
-Neighbor: At least they are alive.
+Neighbor: See, they are alive,so you got nothing to worry about.
 Friend: Can you please open the door?
 You: ...
 You: No.
 Friend: *sighs* okay.
-Friend: But know that I am always there when you need help.
+Friend: But know that I am always there if you need me.
 Friend: And I worry about you.
 Neighbor: And I worry about my sleep.
 You: I cannot anymore.
