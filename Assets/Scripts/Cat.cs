@@ -78,7 +78,7 @@ public class Cat : MonoBehaviour {
     }
 
     public bool Hungy() {
-        return m_FoodTimer < 6f;
+        return m_FoodTimer < 2f;
     }
    
     void ChooseFoodTarget() {
