@@ -72,14 +72,17 @@ You: My parents are calling me.
 title: parentsphone1
 ---
 You: Hello.
+<<playsound Eltern_freundl_>>
 Parents: Hello, sweetie.
 Parents: How are you?
 You: Good.
 You: And you?
+<<playsound Eltern_freundl_>>
 Parents: We are also good.
 You: ...
 Parents: ...
 You: ...
+<<playsound Eltern_freundl_>>
 Parents: We wanted to ask you...
 You: Sorry, the cat's trying to throw up on the carpet, gotta go. Bye.
 You: ...

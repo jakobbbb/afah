@@ -29,6 +29,7 @@ You: And also the rest of the week...
         You: *coughs*
         You: I'm sick.
         You: I will stay home for a few days.
+         <<playsound Boss_annoyed>>
         Boss: ... okay.
         Boss: But you will have to be here on Monday.
         You: Sure.
@@ -78,17 +79,20 @@ You: Good kitty.
     Phone: *ring* *ring*
     You: Oh no. It's my boss.
     You: Hello?
+    <<playsound Boss_angry>>
     Boss: Where are you??
     You: Um.
     You: At home.
     You: *coughs*
     You: I'm sick.
     You: I'll have to stay home for a few days.
+     <<playsound Boss_annoyed>>
     Boss: And you couldn't phone in and tell me that??
     Boss: Ugh.
     Boss: Fine.
     Boss: But be here and on time on Monday or there will be consequences.
     You: Yes, sorry, I will be there.
+     <<playsound Boss_annoyed>>
     Boss: Good.
     You: Bye.
     You: ...
