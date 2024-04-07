@@ -11,10 +11,17 @@ You: And how will I afford your care if I don't have money?
 <<endif>>
 You: But I know, you need your food.
 <<set $money = $money - (7*5)>>
+<<feedcats>>
+<<if $unemployment == true >>
+You: Bye, kittys!
+<<elseif $unemployment == false >>
+You: ... bye, kittys.
+<<endif>>
 <<jump day7_later>>
 ===
 title: day7_later
 ---
+<<collectcats>>
 You: Hehe.
 <<if $unemployment == false>>
 You: Happiness truly IS measured in cats!
@@ -55,11 +62,12 @@ You: Exactly! And that's why I am concentrating on getting even happier.
 Friend: ... and by happier you mean more cats?
 You: Yes! Now you get it!
 Friend: *sighs*
-Friend: ... and what do you mean by concentr... no, no you did not. Tell me you didn't quit your job again.
+Friend: And what do you mean by concentr... no.
+Friend: No, you did not. Tell me you didn't quit your job again.
 You: I didn't...
 Friend: Oh good.
 You: ... I was fired.
-Friend: Why were you fired?
+Friend: Why were you fired?!
 You: Um...
 Friend: Yes?
 You: becauseididntgotoworkbecauseiwasbusycollectingcats
@@ -76,12 +84,12 @@ You: ...well actually...
 Friend: No! No more actually! I can't fucking take it anymore.
 Friend: And I did NOT tell you to collect more fucking cats!
 Friend: I was just glad you finally looked a little more like yourself again!
-Friend: And I thought the cats were a step towards finally healing and not towards
+Friend: And I thought the cats were a step towards finally healing and not towards...
 Friend: *gestures broadly*
-Friend: Whatever the fuck that is!
+Friend: Whatever the fuck this is!
 Friend: Do you have any idea how hard it is for me to always put on a happy face for you?
 Friend: To support you when you are making absolutely no fucking effort to help yourself?
-Friend: I know it's been hard for you but you have to at least try to get your shit together!
+Friend: I know it's not been easy for you but you have to at least try to get your shit together!
 You: ... yes I know.
 Friend: And the worst thing is that I still adore you!!
 You: Oh.

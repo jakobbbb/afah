@@ -4,10 +4,13 @@ title: day8_morning
 You: I do not have much time right now, kittys.
 You: I will quickly give you food and then I have to pursue my happiness.
 <<set $money = $money - (9*5)>>
+<<feedcats>>
+You: Bye, kittys.
 <<jump day8_later>>
 ===
 title: day8_later
 ---
+<<collectcats>>
 You: Very good.
 You: It's all coming together.
 You: Soon I will be truly happy.

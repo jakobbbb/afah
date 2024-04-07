@@ -16,16 +16,19 @@ You: Anyways. Off to work.
 <<declare $unemployment = false>>
 You: After I feed you.
 <<set $money = $money - (5*5)>>
+<<feedcats>>
+You: ... bye, kittys.
 <<jump day6_later>>
 ===
 title: day6_later
 ---
+<<collectcats>>
 You: Two more!
 You: What bliss!
 You: Maybe I can actually be happy?
 Phone: *ring* *ring*
 You: Hello?
-Boss: Where are you?
+Boss: Where are you??
 You: Um, at home?
 Boss: And why are you at home??
 You: I couldn't make it to work?
@@ -44,7 +47,7 @@ You: But how will I afford your care if I don't have money?
 You: ...
 <<if $unemployment == true>>
 You: That's a problem for another day. 
-You: Right now..
+You: Right now...
 <<endif>>
 You: I need more cat litter.
 -> Buy cat litter. 

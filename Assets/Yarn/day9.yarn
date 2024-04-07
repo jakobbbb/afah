@@ -75,10 +75,13 @@ You: Where did all that money come from?
 You: Well, who cares! 
 You: Come get your food, kittys!
 <<set $money = $money - (11*5)>>
+<<feedcats>>
+You: Bye, kittys.
 <<jump day9_later>>
 ===
-title: day9_later_
+title: day9_later
 ---
+<<collectcats>>
 You: *sings* I love cats, I love every kind of cat!
 You: And you are the only ones that love me!
 Phone: *ring* *ring*
