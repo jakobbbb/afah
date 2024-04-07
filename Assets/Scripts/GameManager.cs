@@ -1,10 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Yarn.Unity;
 
 public class GameManager : MonoBehaviour {
+    [SerializeField]
+    private TMP_Text m_DayText;
 
     public enum GameState {
         DIALOGUE,
@@ -31,6 +34,13 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;
     private DialogueRunner m_Dialogue;
+    [System.Serializable]
+    public struct CanvasThing {
+        public string canvasName;
+        public Canvas canvas;
+    }
+    [SerializeField]
+    private List<CanvasThing> m_Canvasses = new();
 
     private void Awake() {
         if (Instance == null) {
@@ -89,6 +99,22 @@ public class GameManager : MonoBehaviour {
 
         Instance.ApplyStateChange();
     }
+
+    [YarnCommand("canvas")]
+    public static void ChangeCanvasVisible(string canvas_name, bool show) {
+        Debug.Log("canvassss " + canvas_name + " " + show);
+        foreach (CanvasThing e in Instance.m_Canvasses) {
+            Debug.Log("..." + e.canvasName + ", " + canvas_name);
+            e.canvas.enabled = show && (e.canvasName == canvas_name);
+            if (show && canvas_name == "day") {
+                var vars = FindAnyObjectByType<InMemoryVariableStorage>();
+                string day = "";
+                vars.TryGetValue<string>("$day", out day);
+                Instance.m_DayText.text = day;
+            }
+        }
+    }
+
 
     [YarnCommand("feedcats")]
     public static void FeedCats() {

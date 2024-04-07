@@ -109,5 +109,9 @@ You: We are going to have a good time, you and me, kitty.
 <<playsound Meow_1>>
 Koschka: Meow.
 You: Good night, kitty.
+<<canvas day true>>
+<<wait 2>>
+<<canvas day false>>
+: ...
 <<jump day2_morning>>
 ===
