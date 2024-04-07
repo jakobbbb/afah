@@ -73,9 +73,9 @@ title: day11_morning
 <<endif>>
 Koschka: Good morning.
 You: I need to get more cats.
-Koschka: Why tho?
+Koschka: But why?
 You: Do you not want me to be happy?
-You: And prove to everyone that I can actually do thing?
+You: And prove to everyone that I can actually do things?
 Koschka: And you think that's the way to do it?
 You: Yes.
 Koschka: Okay.
@@ -84,10 +84,13 @@ Koschka: I just don't like to argue.
 Koschka: Especially with the person who feeds me.
 You: Oh you are right, here's your food.
 <<set $money = $money - (15*5)>>
+<<feedcats>>
+You: ...bye.
 <<jump day11_later>>
 ===
 title: day11_later
 ---
+<<collectcats>>
 You: Mooooore cats.
 Doorbell: *dingdong*
 You: Oh no, that's the neighbor again.
@@ -99,7 +102,7 @@ Doorbell: *dingdong*
 You: What do you mean?
 Koschka: Listen.
 Neighbor: I already tried that. They won't answer the door. Just like yesterday.
-Friend: That is concerning!
+Friend: That's concerning!
 Friend: *knocks*
 Friend: It's me!
 Friend: Please open the door!
@@ -107,7 +110,7 @@ You: Oh no.
 Friend: *knocks*
 Friend: Please!
 Friend: I am so sorry.
-Friend: I'm sorry I yelled at you
+Friend: I'm sorry I yelled at you.
 Friend: I was a real ass.
 Friend: And I am really sorry for that.
 Friend: I was just so overwhelmed.
@@ -116,7 +119,7 @@ Friend: You need my help and not me being angry at you for being unwell.
 Friend: Please answer me!
 Neighbor: And me! These cats are keeping me up at night!
 Friend: ...really? I am trying to have a heartfelt conversation here. 
-Frien: And also can you not just use earplugs?
+Friend: And also can you not just use earplugs?
 Neighbor: I have sensitive ears!
 Friend: *knocks*
 Friend: Please, are you okay?
@@ -125,7 +128,7 @@ You: Um...
 -> Go away.
 -> I don't have problems sleeping.
     Neighbor: I know, I can hear you snoring every night.
-Neighbor: See, they are alive,so you got nothing to worry about.
+Neighbor: See, they are alive, so you got nothing to worry about.
 Friend: Can you please open the door?
 You: ...
 You: No.
@@ -135,5 +138,6 @@ Friend: And I worry about you.
 Neighbor: And I worry about my sleep.
 You: I cannot anymore.
 You: I'm going to bed.
-Koschka: Whatever makes you happy.
+Koschka: Whatever you think makes you happy.
+<<jump day12_morning>>
 ===

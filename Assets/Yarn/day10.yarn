@@ -8,7 +8,7 @@ title: day10_morning
 <<endif>>
 <<if $Peter == true>>
 <<set $money = $money + 10>>
-<<endif>>
+<<endif>>Continue...
 <<if $Luise == true || $Lotte == true>>
 <<set $money = $money + 8>>
 <<endif>>
@@ -25,7 +25,7 @@ title: day10_morning
 <<set $money = $money + 10>>
 <<endif>>
 <<if $Ringo == true>>
-<<set $money = $money + 9>>
+<<set $money = $money + 9>>Why tho
 <<endif>>
 <<if $TanteEdelgart == true>>
 <<set $money = $money + 13>>
@@ -34,12 +34,7 @@ title: day10_morning
 <<set $money = $money + 7>>
 <<endif>>
 <<if $Egg == true>>
-<<set $money = $money + 10>>
-<<endif>>
-<<if $Nullvektor == true>>
-<<set $money = $money + 9>>
-<<endif>>
-<<if $Jesper == true>>
+<<set $money = $money + 10>>Why tho
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $Nina == true>>
@@ -83,13 +78,15 @@ Koschka: Hungry.
 You: I... I did hear you.
 Koschka: Then why are the food bowls empty?
 You: You, um, you're right.
+<<set $money = $money - (13*5)>>
+<<feedcats>>
 You: ...
 You: I'll have to get some fresh air.
-<<set $money = $money - (13*5)>>
 <<jump day10_later>>
 ===
 title: day10_later
 ---
+<<collectcats>>
 You: Now my head is clear and my arms full of cats.
 You: Splendid.
 Koschka: Yes, great.
@@ -121,16 +118,19 @@ You: Oh god, who is this now?
 Koschka: The neighbor.
 You: How do you know that?
 Koschka: Even you should be able to recognize the footsteps.
-You: No I am not.
-Koschka: ... anyways they probably want to complain about the smell...
+You: No, I am not.
+Koschka: ... 
+Koschka: Anyways they probably want to complain about the smell...
 You: Oh no. I need more cat litter.
 Koschka: ...and the noise.
 You: I have to buy some.
--> Buy cat litter. 
-    <<set $money = $money - (3*20)>>
+    -> Buy cat litter. 
+        <<set $money = $money - (3*20)>>
 You: I can feel a migraine coming on.
 You: I have to go to bed.
-Koschka: Well suit yourself. 
+Koschka: Well, suit yourself. 
 You: Good night, kittys.
+Koschka: Ugh.
 Koschka: Some of us have to work, you know?
+<<jump day11_morning>>
 ===
