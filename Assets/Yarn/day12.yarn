@@ -176,6 +176,14 @@ You: Bye, kittys.
 title: day12_later
 ---
 <<collectcats>>
+<<if $Catgirl == true && $livelikethis == false>>
+Catgirl: Damn, you live like this?
+You: Yes, I do.
+<<set $livelikethis = true>>
+<<elseif $Catgirl == true && $livelikethis == true>>
+Catgirl: Damn, you still live like this?
+You: Yes, I still do.
+<<endif>>
 You: Can you feel the happiness?
 Koschka: I can smell it.
 You: Oops, we need more cat litter.

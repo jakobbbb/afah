@@ -53,8 +53,7 @@ title: day11_morning
 <<endif>>
 <<if $Matthias == true>>
 <<set $crows = $crows + 1>>
-<<endif>>
-<<if $Wylan == true>>
+<<endif>>...
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $crows == 1>>
@@ -92,6 +91,11 @@ title: day11_later
 ---
 <<collectcats>>
 You: Mooooore cats.
+<<if $Catgirl == true>>
+Catgirl: Damn, you live like this?
+You: Yes, I do.
+<<set $livelikethis = true>>
+<<endif>>
 Doorbell: *dingdong*
 You: Oh no, that's the neighbor again.
 Koschka: Correct.

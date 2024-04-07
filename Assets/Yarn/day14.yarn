@@ -83,6 +83,14 @@ You: Bye, kittys!
 title: day14_later
 ---
 <<collectcats>>
+<<if $Catgirl == true && $livelikethis == false>>
+Catgirl: Damn, you live like this?
+You: Yes, I do.
+<<set $livelikethis = true>>
+<<elseif $Catgirl == true && $livelikethis == true>>
+Catgirl: Damn, you still live like this?
+You: Yes, I still do.
+<<endif>>
 You: Hehe.
 You: I am so close.
 You: To true happiness.

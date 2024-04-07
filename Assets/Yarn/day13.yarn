@@ -77,6 +77,14 @@ You: ...bye, kittys.
 title: day13_later
 ---
 <<collectcats>>
+<<if $Catgirl == true && $livelikethis == false>>
+Catgirl: Damn, you live like this?
+You: Yes, I do.
+<<set $livelikethis = true>>
+<<elseif $Catgirl == true && $livelikethis == true>>
+Catgirl: Damn, you still live like this?
+You: Yes, I still do.
+<<endif>>
 Koschka: Do you really not think that you have a problem?
 You: Huh?
 -> No.
