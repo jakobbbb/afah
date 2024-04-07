@@ -12,9 +12,9 @@ public class InsaneFurniture : MonoBehaviour {
 
     public void UpdateInsanity(int insaneeee) {
         Sprite s = m_Normal;
-        if (insaneeee == 1) {
+        if (insaneeee == 2) {
             s = m_Insane;
-        } else if (insaneeee == 2) {
+        } else if (insaneeee == 3) {
             s = m_InsaneInsaneAsFuck;
         }
         GetComponent<SpriteRenderer>().sprite = s;
