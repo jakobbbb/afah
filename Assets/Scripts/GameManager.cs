@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         m_Dialogue = FindAnyObjectByType<DialogueRunner>();
+        m_AmbientSource.clip = m_AudioInside[0];
+        m_AmbientSource.Play();
     }
 
     [YarnCommand("playsound")]
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour {
 
     [YarnCommand("collectcats")]
     public static void CollectCats() {
+        Instance.m_AmbientSource.clip = Instance.m_AudioOutside;
         Debug.Log("Collecting...");
         Instance.m_State = GameState.COLLECTING;
         Instance.IsInside = false;
@@ -79,6 +82,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void DoneCollecting() {
+        int i = 0;
+        Instance.m_AmbientSource.clip = Instance.m_AudioInside[i];
         Instance.IsInside = true;
         m_State = GameState.DIALOGUE;
 

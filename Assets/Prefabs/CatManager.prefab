@@ -84,8 +84,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6011ccf4eec4d10db953c26d8bd849f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AudioOutside: {fileID: 0}
-  m_AudioInside: []
+  m_AudioOutside: {fileID: 8300000, guid: ab767651c4cee46a39a5f23cf007d6b4, type: 3}
+  m_AudioInside:
+  - {fileID: 8300000, guid: f6499156c0834e4b18312ad02f7ff6d2, type: 3}
+  - {fileID: 8300000, guid: cd4ac748708cdc114a9e8ec0c6f5a6e5, type: 3}
+  - {fileID: 8300000, guid: 93a415f342033a04d925b4b07adf6d70, type: 3}
   m_SoundEffects:
   - {fileID: 8300000, guid: 0081823a05365ca81a906418979c8e56, type: 3}
   - {fileID: 8300000, guid: cd533e683b91d9720a313269cd3a3a5b, type: 3}
