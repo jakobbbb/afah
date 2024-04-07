@@ -9,9 +9,10 @@ You: Another workday.
 You: Great.
 You: ...
 You: Guess I'll get up now.
+You: ...
+You: Off to work I go.
 <<jump day1_later>>
 ===
-
 title: day1_later
 ---
 <<collectcats>>
@@ -62,7 +63,7 @@ You: And...
         <<set $money= $money - 100>>
         <<set $post = $post + 1>>
             <<jump buying1>>
-    -> Nothing actually. <<if $post == 1 && $litterbox == 1 && $food == 1>>
+    -> Nothing more actually. <<if $post == 1 && $litterbox == 1 && $food == 1>>
 <<jump day1_evenlater>>
 ===
 
@@ -95,5 +96,6 @@ You: ...
 <<endif>>
 You: We are going to have a good time, you and me, kitty.
 Koschka: Meow.
+You: Good night, kitty.
 <<jump day2_morning>>
 ===

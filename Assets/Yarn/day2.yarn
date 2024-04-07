@@ -1,7 +1,6 @@
 title: day2_morning
 ---
 <<set $day = "Thursday">>
-<<declare $friend = 0>>
 You: Good morning, kitty!
 Koschka: Meow.
 You: What a beautiful day!
@@ -11,6 +10,8 @@ You: ... after I feed you, of course.
 <<feedcats>>
 Koschka: Meow.
 <<set $money = $money - (1*5)>>
+<<feedcats>>
+You: Bye, kitty.
 <<jump day2_later>>
 ===
 
@@ -33,9 +34,9 @@ Dicki: Meow.
 <<endif>>
 <<if $Schinken == true>>
 Schinken: Meow.
-<<endif>>
+<<endif>>...
 <<if $Peter == true>>
-MPeter: Meow.
+Peter: Meow.
 <<endif>>
 <<if $Luise == true>>
 Luise: Meow.
@@ -64,7 +65,9 @@ You: My parents are calling me.
         <<set $parents = $parents + 1>>
         <<jump parentsphone1>>
     -> Don't pick up phone.
-        <<jump day2_end>>
+        You: I can't deal with them right now.
+        You: ...
+            <<jump day2_end>>
 ===
 title: parentsphone1
 ---
@@ -84,9 +87,6 @@ You: Sorry, I used you as an excuse to end the call.
 You: ...
 You: But I can't deal with them right now.
 <<jump catsmeow92>>
-<<set $friend = $friend + 1>>
-Phone: *ring* *ring*
-You: Oh, it's my friend!
 ===
 title: day2_end
 ---
