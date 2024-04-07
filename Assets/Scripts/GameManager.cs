@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour {
     [YarnCommand("collectcats")]
     public static void CollectCats() {
         Instance.m_AmbientSource.clip = Instance.m_AudioOutside;
+        Instance.m_AmbientSource.Play();
         Debug.Log("Collecting...");
         Instance.m_State = GameState.COLLECTING;
         Instance.IsInside = false;
@@ -82,8 +84,9 @@ public class GameManager : MonoBehaviour {
     }
 
     public void DoneCollecting() {
-        int i = 0;
+        int i = CatManager.Instance.InsanityLevel - 1;
         Instance.m_AmbientSource.clip = Instance.m_AudioInside[i];
+        Instance.m_AmbientSource.Play();
         Instance.IsInside = true;
         m_State = GameState.DIALOGUE;
 
