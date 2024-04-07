@@ -55,8 +55,8 @@ Lotte: Meow.
 <<playsound Meow_8>>
 Kasimir: Meow.
 <<endif>>
-<<if $Jesper == true>>
-<<playsound Meow_9>>
+<<if $Jasper == true>>
+<<playsound Meow_10>>
 Jesper: Meow.
 <<endif>>
 <<if $cats == 2>>

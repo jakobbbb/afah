@@ -8,7 +8,7 @@ title: day10_morning
 <<endif>>
 <<if $Peter == true>>
 <<set $money = $money + 10>>
-<<endif>>Continue...
+<<endif>>
 <<if $Luise == true || $Lotte == true>>
 <<set $money = $money + 8>>
 <<endif>>
@@ -25,7 +25,7 @@ title: day10_morning
 <<set $money = $money + 10>>
 <<endif>>
 <<if $Ringo == true>>
-<<set $money = $money + 9>>Why tho
+<<set $money = $money + 9>>
 <<endif>>
 <<if $TanteEdelgart == true>>
 <<set $money = $money + 13>>
@@ -34,7 +34,12 @@ title: day10_morning
 <<set $money = $money + 7>>
 <<endif>>
 <<if $Egg == true>>
-<<set $money = $money + 10>>Why tho
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Nullvektor == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $Jasper == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $Nina == true>>

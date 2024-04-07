@@ -39,6 +39,15 @@ title: day13_morning
 <<if $Nullvektor == true>>
 <<set $money = $money + 9>>
 <<endif>>
+<<if $Jasper == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Nina == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Kaz == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
 <<if $Inej == true>>
 <<set $crows = $crows + 1>>
 <<endif>>

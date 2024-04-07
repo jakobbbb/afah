@@ -39,7 +39,7 @@ title: day14_morning
 <<if $Nullvektor == true>>
 <<set $money = $money + 9>>
 <<endif>>
-<<if $Jesper == true>>
+<<if $Jasper == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $Nina == true>>
