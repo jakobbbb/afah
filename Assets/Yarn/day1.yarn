@@ -23,7 +23,8 @@ You: I should probably call my boss and tell her that I can't work today.
 You: And also the rest of the week...
     -> Phone boss.
         <<set $boss = true>>
-        Boss: [playsound Boss_annoyed] Hello?
+        <<playsound Boss_annoyed>>
+        Boss: Hello?
         You: Um, hello. I can't work today.
         You: *coughs*
         You: I'm sick.
@@ -32,7 +33,9 @@ You: And also the rest of the week...
         Boss: But you will have to be here on Monday.
         You: Sure.
         You: Bye.
-        You: ...
+        You: ...<<if $Wylan == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
         You: Now back to the cat.
     -> Don't phone boss.
         <<set $boss = false>>
