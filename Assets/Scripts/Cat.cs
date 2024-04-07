@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 
 public class Cat : MonoBehaviour {
     private Collider2D m_CurrentCollider;
+    private float m_StuckTimer = 0f;
     public enum CatState {
         WALKING_TO_TARGET,
         SLEEPING,
@@ -115,6 +116,10 @@ public class Cat : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        float dist_prev = 99999999f;
+        if (m_NavTarget) {
+            dist_prev = (m_NavTarget.position - m_NavBase.position).magnitude;
+        }
         Unstuck();
         if (m_StateChangeRollCooldown < 0f) {
             m_PrevState = m_State;
@@ -151,6 +156,20 @@ public class Cat : MonoBehaviour {
         m_JumpCooldown -= Time.fixedDeltaTime;
         m_StateChangeRollCooldown -= Time.fixedDeltaTime;
         m_StateTimer += Time.fixedDeltaTime;
+
+        if (m_NavTarget) {
+            float dist_post = (m_NavTarget.position - m_NavBase.position).magnitude;
+            if (m_State == CatState.WALKING_TO_TARGET) {
+                float progress = dist_post - dist_prev;  // how much cat moved towards its goal
+                if (progress < 0.01f) {
+                    m_StuckTimer += Time.fixedDeltaTime;
+                    if (m_StuckTimer > 2.2f) {
+                        ChooseZoomieTarget();
+                        m_StuckTimer = 0f;
+                    }
+                }
+            }
+        }
     }
 
     void ApplyStateChange() {
