@@ -4728,6 +4728,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodSpawnerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4236834487369251826, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
+      propertyPath: m_Size.x
+      value: 17.142975
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236834487369251826, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
+      propertyPath: m_Size.y
+      value: 13.020185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236834487369251826, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.11188507
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236834487369251826, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
+      propertyPath: m_Offset.y
+      value: -3.9941378
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433528327000771835, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
+      propertyPath: m_Size.x
+      value: 17.666107
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433528327000771835, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
+      propertyPath: m_Size.y
+      value: 15.168476
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433528327000771835, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.31628036
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433528327000771835, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.8202906
+      objectReference: {fileID: 0}
     - target: {fileID: 4509462644001995747, guid: f9c339b50ea6dc357b4d15c913edde0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
