@@ -13,7 +13,7 @@ public class CamControl : MonoBehaviour
     [SerializeField]
     private Transform m_MaxOutdoor;
     void Update() {
-        bool indoor = true;
+        bool indoor = GameManager.Instance.IsInside;
         var min = indoor ? m_MinIndoor : m_MinOutdoor;
         var max = indoor ? m_MaxIndoor : m_MaxOutdoor;
 
@@ -27,7 +27,15 @@ public class CamControl : MonoBehaviour
             dx = - speed_max * ((1f-lim) - x);
         }
         float new_x = transform.position.x + (Time.deltaTime * dx);
-        if (new_x < min.position.x || new_x > max.position.x) {
+        if (new_x < min.position.x) {
+            var t = transform.position;
+            t.x = min.position.x;
+            transform.position = t;
+            return;
+        } else if (new_x > max.position.x) {
+            var t = transform.position;
+            t.x = max.position.x;
+            transform.position = t;
             return;
         }
         transform.Translate(new Vector3(Time.deltaTime * dx, 0, 0));

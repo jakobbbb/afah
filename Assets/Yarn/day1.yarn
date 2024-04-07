@@ -13,6 +13,7 @@ You: Guess I'll get up now.
 
 title: day1_later
 ---
+<<collectcats>>
 <<set $cats = $cats + 1>>
 You: Huh, guess I have a cat now.
 Koschka: Meow.
