@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: fbd860058c9825145b1f7ae8153e7425, type: 3}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1724813
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.29640195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7169812
+      objectReference: {fileID: 0}
     - target: {fileID: 2452176351371359189, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -56,10 +68,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 52c6be3cfc4a5e340bc65ec26c7ee5cf, type: 3}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 0.26237094
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.39051905
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8301887
+      objectReference: {fileID: 0}
     - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 481999788306ec648b2b0a042cbb9bec, type: 3}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6084906
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9250301
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3365768116932604243, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Name
       value: Jasper

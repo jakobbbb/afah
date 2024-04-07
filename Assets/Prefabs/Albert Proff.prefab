@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b55f74fab57295b478094b678fe3e0ec, type: 3}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6415094
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6415094
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6415094
+      objectReference: {fileID: 0}
     - target: {fileID: 2452176351371359189, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -56,10 +68,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f9f68abdd72a75a4d90b51c08268ac13, type: 3}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 0.76862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4496ca4c2b479894ea521a1eec8f06bb, type: 3}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 0.76862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3365768116932604243, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Name
       value: Albert Proff

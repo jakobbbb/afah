@@ -11,7 +11,19 @@ PrefabInstance:
     - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e98a010f1c7a2d44abe14fa74cafcd10, type: 3}
+      objectReference: {fileID: 21300000, guid: da0658fcf7fcbd0498133efa31f17398, type: 3}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 0.45490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9529412
+      objectReference: {fileID: 0}
     - target: {fileID: 2452176351371359189, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -55,14 +67,42 @@ PrefabInstance:
     - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 23f93c5f2024ed34486d934b47028d0f, type: 3}
+      objectReference: {fileID: 21300000, guid: 3aea50ce241a33545b70f5c7b129ceec, type: 3}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 0.45490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.69411767
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d45d7b31758f37142b776f458ec27ffa, type: 3}
+      objectReference: {fileID: 21300000, guid: ce150b8a489599d47a2b91d73593038c, type: 3}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8598318
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6367924
+      objectReference: {fileID: 0}
     - target: {fileID: 3365768116932604243, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Name
-      value: Luise
+      value: Lotte
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
