@@ -22,12 +22,8 @@ title: day12_morning
 <<endif>>
 <<if $Harald == true>>
 <<set $money = $money + 10>>
-<<<<<<< HEAD
 <<endif>>
-<<if $Ringo == true>>have have 
-=======
 <<if $Ringo == true>>
->>>>>>> 13946c4 (test)
 <<set $money = $money + 9>>
 <<endif>>
 <<if $TanteEdelgart == true>>
