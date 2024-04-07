@@ -244,7 +244,7 @@ public class Cat : MonoBehaviour {
     }
 
     void Unstuck() {
-        if (CatManager.Instance.IsWalkable(m_NavBase.position)) {
+        if (CatManager.Instance.IsWalkable(m_NavBase.position, this)) {
             return;
         }
 
@@ -313,10 +313,10 @@ public class Cat : MonoBehaviour {
             
         }
         
-        if (CatManager.Instance.IsWalkable((Vector2)m_NavBase.position + delta_x)) {
+        if (CatManager.Instance.IsWalkable((Vector2)m_NavBase.position + delta_x, this)) {
             move += delta_x;
         }
-        if (CatManager.Instance.IsWalkable((Vector2)m_NavBase.position + delta_y)) {
+        if (CatManager.Instance.IsWalkable((Vector2)m_NavBase.position + delta_y, this)) {
             move += delta_y;
         }
 

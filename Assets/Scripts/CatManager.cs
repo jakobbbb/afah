@@ -61,8 +61,9 @@ public class CatManager : MonoBehaviour {
         m_Outsides.Add(m_Outside);
     }
 
-    public bool IsWalkable(Vector3 pos) {
-        foreach (var collider in m_WalkableColliders) {
+    public bool IsWalkable(Vector3 pos, Cat cat) {
+        var w = cat.Collected ? m_WalkableColliders : m_Outsides;
+        foreach (var collider in w) {
             pos.z = collider.bounds.center.z;  // ignore z
             if (collider.bounds.Contains(pos)) {
                 return true;
