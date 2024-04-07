@@ -77,12 +77,14 @@ Parents: How are you?
 You: Good.
 You: And you?
 Parents: We are also good.
+<<if $parents == 2>>
 Parents: How is your cat doing?
 You: Um, pretty good. 
 You: There's actually five of them now.
 Parents: Five? That's quite a lot of cats.
 Parents: Do they all get along?
 You: Yes.
+<<endif>>
 You: ...
 Parents: ...
 You: ...
