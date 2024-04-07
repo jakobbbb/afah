@@ -41,7 +41,7 @@ title: day13_morning
 <<if $Inej == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
-<<if $Matthias == true>>Friend: And we miss you!
+<<if $Matthias == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $Wylan == true>>
@@ -58,7 +58,7 @@ title: day13_morning
 <<elseif $crows == 5>>
 <<set $money = $money + 120>>
 <<elseif $crows == 6>>
-<<set $money = $money + 150>>Friend: And we miss you!
+<<set $money = $money + 150>>
 <<set $heist = true >>
 <<endif>>
 You: I'll show them.
@@ -68,7 +68,7 @@ You: I am not unwell.
 You: I am not spiraling.
 You: ...
 You: Here is your food.
-<<set $money = $money - (30*5)>>
+<<set $money = $money - (25*5)>>
 <<jump day13_later>>
 ===
 title: day13_later

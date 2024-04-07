@@ -1,0 +1,156 @@
+title: day15_morning
+---
+<<set $crows = 0>>
+<<set $money = $money + 15>>
+<<if $Miette == true>>
+<<set $money = $money + 15>>
+<<endif>>
+<<if $Peter == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Luise == true || $Lotte == true>>
+<<set $money = $money + 8>>
+<<endif>>
+<<if $Lotte == true && $Luise == true>>
+<<set $money = $money + 16>>
+<<endif>>
+<<if $Kasimir == true>>
+<<set $money = $money + 6>>
+<<endif>>
+<<if $Albert == true>>
+<<set $money = $money + 11>>
+<<endif>>
+<<if $Harald == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Ringo == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $TanteEdelgart == true>>
+<<set $money = $money + 13>>
+<<endif>>
+<<if $Toni == true>>
+<<set $money = $money + 7>>
+<<endif>>
+<<if $Egg == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Nullvektor == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $Jesper == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Nina == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Kaz == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Inej == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Matthias == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Wylan == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $crows == 1>>
+<<set $money = $money + 2>>
+<<elseif $crows == 2>>
+<<set $money = $money + 5>>
+<<elseif $crows == 3>>
+<<set $money = $money + 20>>
+<<elseif $crows == 4>>
+<<set $money = $money + 50>>
+<<elseif $crows == 5>>
+<<set $money = $money + 120>>
+<<elseif $crows == 6>>
+<<set $money = $money + 150>>
+<<set $heist = true >>
+<<endif>>
+You: I am well.
+You: I am not unwell.
+You: I am not spiraling.
+You: I am happy.
+You: I am happy.
+Koschka: Sounds like you're trying to convince yourself.
+You: Oh shut up.
+You: You know nothing, Koschka Cat.
+Koschka: Keep telling yourself that.
+You: Here is you food. Now leave me alone.
+<<set $money = $money - (45*5)>>
+<<jump day15_afah>>
+===
+title: day15_afah
+---
+You: Something is different.
+You: Where are the cats?
+You: I need them.
+You: I NEED THEM.
+You: I NEED TO BE HAPPY.
+Cat: AFAH
+You: Oh a cat. Very good.
+You: Come down, kitty.
+You: Come here, kitty kitty.
+You: Come down, YOU BASTARD.
+Cat: AFAH
+You: Sorry.
+You: I shouldn't have yelled at you.
+You: Please come down.
+You: I need to be happy.
+You: I can't do it on my own.
+Cat: AFAH
+You: I am not strong enough. 
+You: Everyone thinks I'm a failure.
+You: And they are right.
+You: They are so worried, you know.
+You: And sometimes I think they may be right.
+Cat: AFAH
+You: I mean look at me.
+You: Talking to cats about my problems.
+You: I have so many at home right now.
+You: Actually I can barely talk to them because there are so many.
+You: It's completely out of control.
+You: I am completely out of control.
+Cat: AFAH
+You: I can't continue to live like this.
+You: Ugh.
+You: They were right all along.
+You: Only I can solve my problems.
+You: I can't just rely on external factors to fill the void inside of me.
+You: Without me making an effort, I will never get truly better.
+You: And I have to allow myself to be loved.
+You: I will have to get better not only for me but for my friend too.
+<<if $parents == 4>>
+You: And my parents.
+<<endif>>
+You: At some point I will probably fail again but that does not mean I am a bad person. I just have to keep trying.
+You: I am strong.
+You: I am loved.
+You: I need help.
+Cat: AFAH
+You: Thank you, cat. 
+<<jump day15_116117>>
+===
+title: day15_116117
+---
+Phone operator: Hello, 116117, how can I help you?
+You: I need help.
+You: My mental health is really bad.
+You: And I have a lot of cats.
+Phone operator: Do you have any thoughts about hurting yourself ... or the cats?
+You: No.
+Phone operator: Okay, I can make you a psychotherapy appointment tomorrow, would that be okay?
+You: Sure.
+Phone operator: I'll tell you the time and the place. 
+You: Thank you.
+Phone operator: ... I think you will have to sort out the cats yourself. I am afraid I can't help you with them.
+Phone operator: Or maybe ask your friends and/or family?
+You: Yes, I think will do that.
+Phone operator: Good. And remember, in case of an emergency please call 112.
+You: Yes, thank you.
+Phone operator: Good luck and I wish you all the best on your road to recovery.
+You: Thank you.
+===
