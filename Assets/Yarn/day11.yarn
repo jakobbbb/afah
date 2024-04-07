@@ -53,7 +53,8 @@ title: day11_morning
 <<endif>>
 <<if $Matthias == true>>
 <<set $crows = $crows + 1>>
-<<endif>>...
+<<endif>>
+<<if $Wylan == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $crows == 1>>
