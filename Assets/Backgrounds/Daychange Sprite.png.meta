@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Daychange Sprite_0: 7993540119812254117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

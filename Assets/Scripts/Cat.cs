@@ -86,6 +86,9 @@ public class Cat : MonoBehaviour {
         float min_dist = 9999999f;
         Transform target = null;
         foreach (var f in foods) {
+            if (f.Empty()) {
+                continue;
+            }
             var a = f.transform.position;
             var b = m_NavBase.transform.position;
             a.z = b.z; // ignoer z AAAaaaaa i spent way to long on figuring this out AAAaaaAAaAAAAAAaaAAAAAAa
@@ -292,10 +295,10 @@ public class Cat : MonoBehaviour {
         if (delta.magnitude < 0.1f) {
             // Target reached
             m_Animator.SetTrigger("Idle");
-            m_FoodTimer += Time.fixedDeltaTime;
             Food food = m_NavTarget.GetComponent<Food>();
-            if (food) {
+            if (food && !food.Empty()) {
                 food.Consume(Time.fixedDeltaTime);
+                m_FoodTimer += Time.fixedDeltaTime;
             }
             if (!WalkingTowardsFood() && Util.Roll(1)) {
                 ChooseZoomieTarget();
