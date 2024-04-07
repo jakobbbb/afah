@@ -18,6 +18,7 @@ title: day1_later
 <<collectcats>>
 <<set $cats = $cats + 1>>
 You: Huh, guess I have a cat now.
+<<playsound Meow_1>>
 Koschka: Meow.
 You: I should probably call my boss and tell her that I can't work today.
 You: And also the rest of the week...
@@ -40,6 +41,7 @@ You: And also the rest of the week...
         <<set $boss = false>>
         You: There are more important things to do right now.
 You: What do cats need?
+<<playsound Meow_1>>
 Koschka: Meow.
 <<jump buying1>>
 ===
@@ -73,6 +75,7 @@ title: day1_evenlater
 ---
 You: Nice.
 You: Do you like it?
+<<playsound Meow_1>>
 Koschka: Meow.
 You: Good kitty.
 <<if $boss == false>>
@@ -100,6 +103,7 @@ You: Good kitty.
 You: ...
 <<endif>>
 You: We are going to have a good time, you and me, kitty.
+<<playsound Meow_1>>
 Koschka: Meow.
 You: Good night, kitty.
 <<jump day2_morning>>
