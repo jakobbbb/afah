@@ -77,7 +77,15 @@ MonoBehaviour:
   - {fileID: 907089327778480012, guid: 0cf22a4ab0d9b2843b8e3829207f5a90, type: 3}
   - {fileID: 907089327778480012, guid: 5cfb9740fc3f5f646b18173dd0b35c2b, type: 3}
   - {fileID: 907089327778480012, guid: df71f8170612adf43bc9dec63fb7abb3, type: 3}
-  m_SpawnableCats_Level3: []
+  m_SpawnableCats_Level3:
+  - {fileID: 907089327778480012, guid: 06fc234b43111114cbff4650a2ba858a, type: 3}
+  - {fileID: 907089327778480012, guid: 2a5c2321b2da19046b8c85d781fa478c, type: 3}
+  - {fileID: 3365768116932604243, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
+  - {fileID: 3365768116932604243, guid: f5c2ac43ef149da4d831d9e220735004, type: 3}
+  - {fileID: 907089327778480012, guid: 41780944da352d242a42e6b72aef3343, type: 3}
+  - {fileID: 907089327778480012, guid: 608102c68b3ab6b469ae113d90e56f51, type: 3}
+  - {fileID: 907089327778480012, guid: c6d4ea5b30ec27b4ab5530f7300ac661, type: 3}
+  - {fileID: 907089327778480012, guid: 397fe026caa397f438a250eaf619f0ab, type: 3}
   m_Outside: {fileID: 0}
 --- !u!114 &8771130119966687286
 MonoBehaviour:
