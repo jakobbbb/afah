@@ -1,6 +1,10 @@
 title: day13_morning
 ---
 <<set $day = "Monday">>
+<<canvas day true>>
+<<wait 2>>
+<<canvas day false>>
+: ...
 <<set $crows = 0>>
 <<set $money = $money + 15>>
 <<if $Miette == true>>

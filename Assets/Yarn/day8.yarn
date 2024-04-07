@@ -1,6 +1,10 @@
 title: day8_morning
 ---
 <<set $day = "Wednesday">>
+<<canvas day true>>
+<<wait 2>>
+<<canvas day false>>
+: ...
 You: I do not have much time right now, kittys.
 You: I will quickly give you food and then I have to pursue my happiness.
 <<set $money = $money - (9*5)>>

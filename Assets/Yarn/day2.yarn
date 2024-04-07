@@ -1,6 +1,10 @@
 title: day2_morning
 ---
 <<set $day = "Thursday">>
+<<canvas day true>>
+<<wait 2>>
+<<canvas day false>>
+: ...
 You: Good morning, kitty!
 <<playsound Meow_1>>
 Koschka: Meow.

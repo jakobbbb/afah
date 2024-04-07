@@ -1,6 +1,10 @@
 title: day3_morning
 ---
 <<set $day = "Friday">>
+<<canvas day true>>
+<<wait 2>>
+<<canvas day false>>
+: ...
 <<declare $friend = 0>>
 You: Good morning, kittys!
 <<jump catsmeow93>>
