@@ -33,9 +33,7 @@ You: And also the rest of the week...
         Boss: But you will have to be here on Monday.
         You: Sure.
         You: Bye.
-        You: ...<<if $Wylan == true>>
-<<set $crows = $crows + 1>>
-<<endif>>
+        You: ...
         You: Now back to the cat.
     -> Don't phone boss.
         <<set $boss = false>>
