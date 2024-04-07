@@ -104,10 +104,12 @@ You: My parents.
 title: parentsphone3
 ---
 You: Hello.
+<<playsound Eltern_freundl_>>
 Parents: Hello, sweetie.
 Parents: How are you?
 You: Good.
 You: And you?
+<<playsound Eltern_freundl_>>
 Parents: We are also good.
 Parents: You know we would love to see you again sometime.
 <<if $parents == 1>>
@@ -117,6 +119,7 @@ Parents: And before you hang up again, you do not have to decide right now.
 <<endif>>
 Parents: Just think about it okay?
 You: Um, okay I will.
+<<playsound Eltern_freundl_>>
 Parents: Great! Have a good day! Love you!
 You: ...
 <<jump day9_end>>

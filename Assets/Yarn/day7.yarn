@@ -44,56 +44,73 @@ You: Weird.
 Doorbell: *dingdong*
 You: Huh?
 You: Even weirder. I could swear I'm definitely not expecting anyone.
+<<playsound Friend_hi>>
 Friend: Hello, it's me!
 You: My friend! How delightful!
 You: Come in!
+<<playsound Friend_freundl>>
 Friend: I was in the area and thought I'd stop by and say hello!
 Friend: How are you... wait a damn minute.
+<<playsound Friend_huh_surprise>>
 Friend: Didn't you have only four cats?
 Friend: Now there are nine??
 Friend: I was here like three days ago.
 Friend: Why are there more than twice as many cats now??
 You: Um... because cats equal happiness?
+<<playsound Friend_u_huh>>
 Friend: *speechless*
 You: Well you told me that I needed more cats!
+<<playsound Friend_huh_annoy>>
 Friend: I did not!
 Friend: I said you looked happier!
 You: Exactly! And that's why I am concentrating on getting even happier.
+<<playsound Friend_huh_annoy>>
 Friend: ... and by happier you mean more cats?
 You: Yes! Now you get it!
 Friend: *sighs*
 Friend: And what do you mean by concentr... no.
+<<playsound Friend_arrg>>
 Friend: No, you did not. Tell me you didn't quit your job again.
 You: I didn't...
+<<playsound Friend_reliev_1>>
 Friend: Oh good.
 You: ... I was fired.
+<<playsound Friend_huh_annoy>>
 Friend: Why were you fired?!
 You: Um...
 Friend: Yes?
 You: becauseididntgotoworkbecauseiwasbusycollectingcats
+<<playsound Friend_arrg>>
 Friend: I can't fucking believe it! 
 Friend: I can't fucking believe you've done it again!
+<<playsound Friend_angry>>
 Friend: You promised me you would try your best to keep the job this time!
 Friend: YOU PROMISED!
 You: ... yes I know.
+<<playsound Friend_angry>>
 Friend: And I BELIEVED YOU!
 Friend: Do you have any idea how long I had to pester my mom to give you this job?!
 You: ... yes I know.
+<<playsound Friend_arrg>>
 Friend: And you chose to just not go to work because CATS??
 You: ...well actually...
+<<playsound Friend_angry>>
 Friend: No! No more actually! I can't fucking take it anymore.
 Friend: And I did NOT tell you to collect more fucking cats!
 Friend: I was just glad you finally looked a little more like yourself again!
 Friend: And I thought the cats were a step towards finally healing and not towards...
 Friend: *gestures broadly*
+<<playsound Friend_angry>>
 Friend: Whatever the fuck this is!
 Friend: Do you have any idea how hard it is for me to always put on a happy face for you?
 Friend: To support you when you are making absolutely no fucking effort to help yourself?
 Friend: I know it's not been easy for you but you have to at least try to get your shit together!
 You: ... yes I know.
+<<playsound Friend_arrg>>
 Friend: And the worst thing is that I still adore you!!
 You: Oh.
 Friend: Which is making watching you just giving up on yourself even fucking worse.
+<<playsound Friend_arrg>>
 Friend: Argh.
 Friend: I'm leaving. I cannot deal with this.
 You: ...

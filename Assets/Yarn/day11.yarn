@@ -59,9 +59,7 @@ title: day11_morning
 <<endif>>
 <<if $crows == 1>>
 <<set $money = $money + 2>>
-<<elseif $crows == 2>>
-<<set $money = $money + 5>>
-<<elseif $crows == 3>>
+<<elseif $crows == 2>><<playsound Friend_arrg>>
 <<set $money = $money + 20>>
 <<elseif $crows == 4>>
 <<set $money = $money + 50>>
@@ -106,13 +104,14 @@ Koschka: Well here comes someone you can't just ignore.
 Doorbell: *dingdong* 
 You: What do you mean?
 Koschka: Listen.
+<<playsound Nachbar>>
 Neighbor: I already tried that. They won't answer the door. Just like yesterday.
 Friend: That's concerning!
-Friend: *knocks*
+<<playsound Klopfen>>
 Friend: It's me!
 Friend: Please open the door!
 You: Oh no.
-Friend: *knocks*
+<<playsound Klopfen>>
 Friend: Please!
 Friend: I am so sorry.
 Friend: I'm sorry I yelled at you.
@@ -126,7 +125,7 @@ Neighbor: And me! These cats are keeping me up at night!
 Friend: ...really? I am trying to have a heartfelt conversation here. 
 Friend: And also can you not just use earplugs?
 Neighbor: I have sensitive ears!
-Friend: *knocks*
+<<playsound Klopfen>>
 Friend: Please, are you okay?
 You: Um...
 -> I'm fine.

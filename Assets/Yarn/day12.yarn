@@ -74,6 +74,7 @@ title: day12_morning
 Phone: *ring* *ring*
 You: Who is calling me at this time?
 You: Hello?
+<<playsound Eltern_freundl_>>
 Parents: Hello, sweetie.
 <<set $parents = $parents + 1>>
 <<if $parents == 1>>
@@ -91,8 +92,10 @@ title: parentsphone41
 Parents: How are you?
 You: Good.
 You: And you?
+<<playsound Eltern_freundl_>>
 Parents: We are also good.
 You: ...
+<<playsound Eltern_besorgt_1>>
 Parents: You know, your friend called us. They are concerned about you.
 Parents: Something about a lot of cats?
 You: Can't speak right now, gotta go to work.
@@ -104,19 +107,23 @@ title: parentsphone42
 Parents: How are you?
 You: Good.
 You: And you?
+<<playsound Eltern_freundl_>>
 Parents: We are also good.
 <<if $think == true>>
 Parents: Did you have time to think about us seeing each other again?
 You: Um...
+<<playsound Eltern_freundl_>>
 Parents: No worries! Anyways...
 <<else>>
 Parents: Anyways...
 <<endif>>
+<<playsound Eltern_besorgt_1>>
 Parents: We wanted to call you because your friend told us they are concerned about you.
 Parents: And what they told us does sound concerning.
 Parents: What is going on in your life right now?
 You: Um...
 You: Well...
+<<playsound Eltern_freundl_>>
 Parents: Yes?
 You: Can't speak right now, gotta go to work.
 You: Oof, that was close.
@@ -127,6 +134,7 @@ title: parentsphone43
 Parents: How are you?
 You: Good.
 You: And you?
+<<playsound Eltern_freundl_>>
 Parents: We are also good.
 <<if $think == true>>
 Parents: Did you have time to think about us seeing each other again?
@@ -135,6 +143,7 @@ Parents: No worries! Anyways... letter
 <<else>>
 Parents: Anyways...
 <<endif>>
+<<playsound Eltern_besorgt_1>>
 Parents: We wanted to call you because your friend told us they are worried about you.
 Parents: And we are also worried about you.
 Parents: What is going on in your life right now?
@@ -143,8 +152,10 @@ You: Um...
 You: Well...
 You: ...
 You: Can't speak right now, gotta go to work.
+<<playsound Eltern_freundl_>>
 Parents: Sweetie, we know that you have been fired again.
 Parents: And we are not mad at you.
+<<playsound Eltern_besorgt_1>>
 Parents: Please let us help you.
 You: ...
 You: Gotta go, bye.
@@ -153,17 +164,21 @@ You: Gotta go, bye.
 title: parentsphone44
 ---
 Parents: Sweetie, we want to be honest with you.
+<<playsound Eltern_besorgt_1>>
 Parents: We are very worried about you.
 Parents: You friend came over and told us about you spiraling again.
 Parents: That you got fired from your job because you were too busy collecting cats?
 You: Um...
+<<playsound Eltern_freundl_>>
 Parents: Sweetie, we all love you very much and want you to get better.
 Parents: Is there anything we can do to help?
 You: ...
 You: ...
 You: ...
 You: I need money for the cats?
+<<playsound Eltern_freundl_>>
 Parents: Okay, we will send you some money.
+<<playsound Eltern_besorgt_1>>
 Parents: But please consider your situation right now and if this is something that's making you happy and if you want to continue your life like that.
 You: ...
 You: Thank you.

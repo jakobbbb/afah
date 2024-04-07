@@ -74,9 +74,11 @@ position: 43,95
 Phone: *ring* *ring*
 You: Oh, it's my friend!
 You: Hello!
+<<playsound Friend_hi>>
 Friend: Hi!
 Friend: I just wanted to know if were still on for tomorrow?
 You: Sure!
+<<playsound Friend_freundl>>
 Friend: Yeay! See you soon!
 You: Bye!
 You: They are such a great friend.
