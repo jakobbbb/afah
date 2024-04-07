@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Koschka_0: 128653966239661813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
