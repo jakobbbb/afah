@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6011ccf4eec4d10db953c26d8bd849f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_DayText: {fileID: 0}
   m_AudioOutside: {fileID: 8300000, guid: ab767651c4cee46a39a5f23cf007d6b4, type: 3}
   m_AudioInside:
   - {fileID: 8300000, guid: f6499156c0834e4b18312ad02f7ff6d2, type: 3}
@@ -150,6 +151,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d9bbbf2cd2094e5489ff6aa6cf708f38, type: 3}
   - {fileID: 8300000, guid: 1796ee898ee304845837688bba5d05bd, type: 3}
   - {fileID: 8300000, guid: 3d7a2b7ea3a33474b83db5ed61770b0e, type: 3}
+  - {fileID: 8300000, guid: 22952713c49ba6c4d9d715d6884f7845, type: 3}
   - {fileID: 8300000, guid: aa56fd055ad464646adf364808270922, type: 3}
   m_EffectSource: {fileID: 0}
   m_AmbientSource: {fileID: 0}
+  m_Canvasses: []
