@@ -49,7 +49,7 @@ title: day12_morning
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $crows == 1>>
-<<set $money = $money + 2>>_
+<<set $money = $money + 2>>
 <<elseif $crows == 2>>
 <<set $money = $money + 5>>
 <<elseif $crows == 3>>
