@@ -394,7 +394,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Foreground Outdoor 2_0: 1200662723907180198
+      Foreground Outdoor 2_1: 6868062285279645120
+      Foreground Outdoor 2_10: -5563863646633410130
+      Foreground Outdoor 2_11: 917716900347264703
+      Foreground Outdoor 2_2: 3260167884221616490
+      Foreground Outdoor 2_3: 274985794099141870
+      Foreground Outdoor 2_4: 3192767767951750861
+      Foreground Outdoor 2_5: -3330645696823456613
+      Foreground Outdoor 2_6: 9135303085016070381
+      Foreground Outdoor 2_7: 2308325509571044484
+      Foreground Outdoor 2_8: -5589487648286284816
+      Foreground Outdoor 2_9: 6907713421412085106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
