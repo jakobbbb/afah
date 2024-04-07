@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 1735212040560198602, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0593cb9aeaa8d784bae49c2498db1dbd, type: 3}
+      objectReference: {fileID: 21300000, guid: d02fc7ea14b8e2e4aa9d86f863c19881, type: 3}
     - target: {fileID: 2452176351371359189, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -55,14 +55,14 @@ PrefabInstance:
     - target: {fileID: 2547697360243274314, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 252d05d3042eb7645898aa6c970109b0, type: 3}
+      objectReference: {fileID: 21300000, guid: f1c15cbbd64a38246a07cf3e544b0a9e, type: 3}
     - target: {fileID: 3110561530358736424, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aee3e3bc86b7c524c9a0b02be7a4cbe0, type: 3}
+      objectReference: {fileID: 21300000, guid: 3418d8561ac593c4b96e23a911e01e09, type: 3}
     - target: {fileID: 3365768116932604243, guid: 5fcbe8a6bf052ab4e9a9ba966d6e6166, type: 3}
       propertyPath: m_Name
-      value: Miette
+      value: Koschka
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
