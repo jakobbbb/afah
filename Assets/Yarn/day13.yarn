@@ -1,0 +1,101 @@
+title: day13_morning
+---
+<<set $crows = 0>>
+<<set $money = $money + 15>>
+<<if $Miette == true>>
+<<set $money = $money + 15>>
+<<endif>>
+<<if $Peter == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Luise == true || $Lotte == true>>
+<<set $money = $money + 8>>
+<<endif>>
+<<if $Lotte == true && $Luise == true>>
+<<set $money = $money + 16>>
+<<endif>>
+<<if $Kasimir == true>>
+<<set $money = $money + 6>>
+<<endif>>
+<<if $Albert == true>>
+<<set $money = $money + 11>>
+<<endif>>
+<<if $Harald == true>>
+<<set $money = $money + 10>_
+<<if $Ringo == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $TanteEdelgart == true>>
+<<set $money = $money + 13>>
+<<endif>>
+<<if $Toni == true>>
+<<set $money = $money + 7>>
+<<endif>>
+<<if $Egg == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Nullvektor == true>>
+<<set $money = $money + 9>>_
+<<if $Inej == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Matthias == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Wylan == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $crows == 1>>
+<<set $money = $money + 2>>_
+<<elseif $crows == 2>>
+<<set $money = $money + 5>>
+<<elseif $crows == 3>>
+<<set $money = $money + 20>>
+<<elseif $crows == 4>>
+<<set $money = $money + 50>>
+<<elseif $crows == 5>>
+<<set $money = $money + 120>>
+<<elseif $crows == 6>>
+<<set $money = $money + 150>>
+<<set $heist = true >>
+<<endif>>
+You: I'll show them.
+You: I'll show them all.
+Koschka: Can you do that after you feed us?
+You: I am not unwell.
+You: I am not spiraling.
+You: ...
+You: Here is your food.
+<<jump day13_later>>
+===
+title: day13_later
+---
+Koschka: Do you really not think that you have a problem?
+You: Huh?
+-> No.
+-> No?
+-> Definitely not.
+Koschka: Well if you say so.
+Door: *dingdong*
+Officer: Hello, veterinary office, please open up!
+You: *whispers* Oh no.
+Officer: We received an animal welfare complaint at this address.
+You: *whispers* The neighbor.
+Officer: Hello, is anyone there?
+You: ...
+-> No.
+-> Meow.
+-> *silence*
+Officer: Hello? 
+Officer: I have to inform you that I will return with police force if necessary.
+Officer: And by necessary I mean if you do not cooperate.
+You: ...
+-> Meow.
+-> Meeooowww.
+-> *silence*
+-> Fuck off.
+Officer: Okay, but you have been officially informed and I will put more informations in your letterbox.
+You: ...
+-> Meow.
+Officer: I should have become an astronaut 
+===
