@@ -94,7 +94,7 @@ You: Mooooore cats.
 <<if $Catgirl == true>>
 Catgirl: Damn, you live like this?
 You: Yes, I do.
-<<set $livelikethis = true>>
+    <<set $livelikethis = true>>
 <<endif>>
 Doorbell: *dingdong*
 You: Oh no, that's the neighbor again.
