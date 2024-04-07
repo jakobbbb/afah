@@ -84,6 +84,7 @@ title: day9_later
 <<collectcats>>
 You: *sings* I love cats, I love every kind of cat!
 You: And you are the only ones that love me!
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: Oh no, it's my friend again.
 You: I am still not ready.
@@ -91,6 +92,7 @@ You: I won't answer the phone.
 You: ...
 You: ...
 You: Finally, it stopped ringing.
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: Ugh. 
 You: My parents.
@@ -121,6 +123,7 @@ Parents: Just think about it okay?
 You: Um, okay I will.
 <<playsound Eltern_freundl_>>
 Parents: Great! Have a good day! Love you!
+<<playsound Auflegen>>
 You: ...
 <<jump day9_end>>
 ===
@@ -133,16 +136,19 @@ You: ...
 You: I cannot disappoint them.
 You: I will get better. 
 You: And happier.
+<<playsound Meow_1>>
 Koschka: Sure.
 You: Huh?...
 You: There it was again.
 You: Am I having auditory hallucinations?
+<<playsound Meow_1>>
 Koschka: Might be.
 You: Yes, you're right. 
 You: It's probably because I am so tired.
 You: I'll go to bed now.
 You: Good night, kittys.
 Koschka: ...
+<<playsound Meow_1>>
 Koschka: Someone's losing their damn mind.
 Koschka: Anyways, off to work.
 <<jump day10_morning>>

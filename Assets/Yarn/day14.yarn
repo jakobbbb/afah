@@ -95,7 +95,9 @@ You: Hehe.
 You: I am so close.
 You: To true happiness.
 You: Hehehehehehe.
+<<playsound Meow_1>>
 Koschka: Uh oh, here come trouble.
+<<playsound Door>>
 Door: *dingdong*
 <<if $parents == 4>>
 Friend: Hey, it's me and your parents!
@@ -167,8 +169,10 @@ You: Am I happy?
 You: Are they right?
 You: Am I unwell?
 You: Am I spiraling?
+<<playsound Meow_1>>
 Koschka: I mean, you are asking a cat.
 Koschka: A talking cat but nonetheless.
+<<playsound Meow_1>>
 Koschka: Doesn't seem like the pinnacle of mental health to me.
 You: But I cannot give up now.
 You: What if the next cats are the ones that finally help me achieve true happiness?
@@ -178,6 +182,7 @@ You: Not if I am so close.
 You: Tomorrow will be the day.
 You: I feel it in my bones. Good night.
 Koschka: ...
+<<playsound Meow_1>>
 Koschka: And I feel it in my throbbing headache.
 <<jump day15_morning>>
 ===

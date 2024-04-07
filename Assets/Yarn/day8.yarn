@@ -14,6 +14,7 @@ title: day8_later
 You: Very good.
 You: It's all coming together.
 You: Soon I will be truly happy.
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: Huh? 
 You: It's my friend.
@@ -28,6 +29,7 @@ You: I'll go to bed now, kittys.
 You: Tomorrow might look nicer.
 You: Good night, kittys.
 Koschka: ...
+<<playsound Meow_1>>
 Koschka: Time to go to work.
 <<jump day9_morning>>
 ===

@@ -73,6 +73,7 @@ title: day13_morning
 <<endif>>
 You: I'll show them.
 You: I'll show them all.
+<<playsound Meow_1>>
 Koschka: Can you do that after you feed us?
 You: I am not unwell.
 You: I am not spiraling.
@@ -94,22 +95,28 @@ You: Yes, I do.
 Catgirl: Damn, you still live like this?
 You: Yes, I still do.
 <<endif>>
+<<playsound Meow_1>>
 Koschka: Do you really not think that you have a problem?
 You: Huh?
 -> No.
 -> No?
 -> Definitely not.
+<<playsound Meow_1>>
 Koschka: Well if you say so.
+<<playsound Door>>
 Door: *dingdong*
+<<playsound Veterinaeramt>>
 Officer: Hello, district veterinary office, please open up!
 You: *whispers* Oh no.
 Officer: We received an animal welfare complaint at this address.
 You: *whispers* The neighbor.
+<<playsound Veterinaeramt>>
 Officer: Hello, is anyone there?
 You: ...
 -> No.
 -> Meow.
 -> *silence*
+<<playsound Veterinaeramt>>
 Officer: Hello? 
 Officer: I have to inform you that I will return with police force if necessary.
 Officer: And by necessary I mean if you do not cooperate.
@@ -119,6 +126,7 @@ You: ...
 -> Meeooowww.
 -> *silence*
 -> Fuck off.
+<<playsound Veterinaeramt>>
 Officer: Okay, but you have been officially informed and I will put an informational leaflet in your letterbox.
 You: ...
 -> Meow.
@@ -126,24 +134,38 @@ Officer: Why am I still working this job?
 Officer: ...
 Officer: I should have become a circus clown like my parents wished.
 You: Oof, that was close.
+<<playsound Meow_1>>
 Koschka: You won't be able to dodge the fuzz forever.
+<<playsound Meow_1>>
+<<playsound Meow_1>>
 Koschka: These institutions are excerting the power that the governement holds over society.
+<<playsound Meow_1>>
 Koschka: But not only them.
+<<playsound Meow_1>>
+<<playsound Meow_1>>
 Koschka: Other institutions that may seem like they have nothing to do with political power.
+<<playsound Meow_1>>
+<<playsound Meow_1>>
+<<playsound Meow_1>>
+<<playsound Meow_1>>
 Koschka: They also maintain power in the hands of a certain social class and exclude the instruments of another social class.
 You: ...
 You: Where did that come from?
+<<playsound Meow_1>>
 Koschka: I watch a lot of Youtube videos.
 You: Fair enough.
 You: So we just have to destroy all institutions to be truly free?
+<<playsound Meow_1>>
 Koschka: Probably? 
 You: Because they are after me.
 You: And won't stop until they have destroyed me.
 You: They don't want me to be happy.
+<<playsound Meow_1>>
 Koschka: Uhm, that's not what I said?
 You: I will think this over in the morning.
 You: Good night, kittys.
 Koschka: ...
+<<playsound Meow_1>>
 Koschka: Well, even I am now truly worried.
 <<jump day14_morning>>
 ===

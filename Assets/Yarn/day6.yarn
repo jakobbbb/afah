@@ -26,21 +26,28 @@ title: day6_later
 You: Two more!
 You: What bliss!
 You: Maybe I can actually be happy?
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: Hello?
+<<playsound Boss_angry>>
 Boss: Where are you??
 You: Um, at home?
+<<playsound Boss_angry>>
 Boss: And why are you at home??
 You: I couldn't make it to work?
 <<if $boss == true>>
+<<playsound Boss_annoyed>>
 Boss: You are getting on my last nerve!
 Boss: Be here tomorrow or you are fired!
 You: ...
 You: I will be.
+<<playsound Auflegen>>
 <<else>>
+<<playsound Boss_angry>>
 Boss: You are fired!!
     <<set $unemployment = true>>
 You: Okay.
+<<playsound Auflegen>>
 You: More time for me and you, kittys.
 You: But how will I afford your care if I don't have money?
 <<endif>>

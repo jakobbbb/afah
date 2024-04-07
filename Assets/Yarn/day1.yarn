@@ -35,6 +35,7 @@ You: And also the rest of the week...
         Boss: But you will have to be here on Monday.
         You: Sure.
         You: Bye.
+        <<playsound Auflegen>>
         You: ...
         You: Now back to the cat.
     -> Don't phone boss.
@@ -79,6 +80,7 @@ You: Do you like it?
 Koschka: Meow.
 You: Good kitty.
 <<if $boss == false>>
+    <<playsound Telefon>>
     Phone: *ring* *ring*
     You: Oh no. It's my boss.
     You: Hello?
@@ -98,6 +100,7 @@ You: Good kitty.
      <<playsound Boss_annoyed>>
     Boss: Good.
     You: Bye.
+    <<playsound Auflegen>>
     You: ...
 <<else>>
 You: ...

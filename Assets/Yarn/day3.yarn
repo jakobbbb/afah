@@ -71,6 +71,7 @@ title: day3_evenlater
 position: 43,95
 ---
 <<set $friend = $friend + 1>>
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: Oh, it's my friend!
 You: Hello!
@@ -81,6 +82,7 @@ You: Sure!
 <<playsound Friend_freundl>>
 Friend: Yeay! See you soon!
 You: Bye!
+<<playsound Auflegen>>
 You: They are such a great friend.
 <<jump catsmeow93>>
 ===

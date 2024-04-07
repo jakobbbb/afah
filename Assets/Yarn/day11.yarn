@@ -69,15 +69,20 @@ title: day11_morning
 <<set $money = $money + 150>>
 <<set $heist = true >>
 <<endif>>
+<<playsound Meow_1>>
 Koschka: Good morning.
 You: I need to get more cats.
+<<playsound Meow_1>>
 Koschka: But why?
 You: Do you not want me to be happy?
 You: And prove to everyone that I can actually do things?
+<<playsound Meow_1>>
 Koschka: And you think that's the way to do it?
 You: Yes.
+<<playsound Meow_1>>
 Koschka: Okay.
 You: I knew you would understand me.
+<<playsound Meow_1>>
 Koschka: I just don't like to argue.
 Koschka: Especially with the person who feeds me.
 You: Oh you are right, here's your food.
@@ -95,14 +100,18 @@ Catgirl: Damn, you live like this?
 You: Yes, I do.
     <<set $livelikethis = true>>
 <<endif>>
+<<playsound Door>>
 Doorbell: *dingdong*
 You: Oh no, that's the neighbor again.
+<<playsound Meow_1>>
 Koschka: Correct.
 You: I will just ignore them.
 You: ...
+<<playsound Meow_1>>
 Koschka: Well here comes someone you can't just ignore.
 Doorbell: *dingdong* 
 You: What do you mean?
+<<playsound Meow_1>>
 Koschka: Listen.
 <<playsound Nachbar>>
 Neighbor: I already tried that. They won't answer the door. Just like yesterday.
@@ -142,6 +151,7 @@ Friend: And I worry about you.
 Neighbor: And I worry about my sleep.
 You: I cannot anymore.
 You: I'm going to bed.
+<<playsound Meow_1>>
 Koschka: Whatever you think makes you happy.
 <<jump day12_morning>>
 ===

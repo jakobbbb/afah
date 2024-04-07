@@ -72,15 +72,21 @@ title: day10_morning
 <<set $heist = true >>
 <<endif>>
 You: Good morning, kittys.
+<<playsound Meow_1>>
 Koschka: Oh you are finally awake.
 Koschka: We are hungry.
 You: What?
+<<playsound Meow_1>>
 Koschka: Perhaps you did not hear me the first time so I will repeat it for you.
 Koschka: Very slowly.
+<<playsound Meow_1>>
 Koschka: Us.
+<<playsound Meow_1>>
 Koschka: Cats.
+<<playsound Meow_1>>
 Koschka: Hungry.
 You: I... I did hear you.
+<<playsound Meow_1>>
 Koschka: Then why are the food bowls empty?
 You: You, um, you're right.
 <<set $money = $money - (13*5)>>
@@ -94,47 +100,63 @@ title: day10_later
 <<collectcats>>
 You: Now my head is clear and my arms full of cats.
 You: Splendid.
+<<playsound Meow_1>>
 Koschka: Yes, great.
 You: Oh god. You are still talking.
+<<playsound Meow_1>>
 Koschka: Of course.
 Koschka: Why should I have stopped?
 You: Because... I mean, you're a cat, you never should have started!
+<<playsound Meow_1>>
 Koschka: Ok, rude.
 You: ... sorry.
+<<playsound Meow_1>>
 Koschka: Apology accepted.
 You: But why are you talking now?
+<<playsound Meow_1>>
 Koschka: I talked to you yesterday.
 You: You what... ah yes I remember. I though I just imagined it because I was so tired.
+<<playsound Meow_1>>
 Koschka: I noticed.
 Koschka: You were fast asleep when I left for work.
 You: When you what? 
+<<playsound Meow_1>>
 Koschka: Where did you think all that money came from??
 You: I don't know.
 You: I didn't really think about it.
+<<playsound Meow_1>>
 Koschka: We noticed.
 Koschka: We also noticed that you aren't able to take care of yourself.
 Koschka: Which is why we all pitched in. 
 Koschka: Well not all of us.
 Koschka: The ones who can actually keep a job.
 You: That feels like thinly veiled criticism.
+<<playsound Meow_1>>
 Koschka: Good.
+<<playsound Door>>
 Doorbell: *dingdong*
 You: Oh god, who is this now?
+<<playsound Meow_1>>
 Koschka: The neighbor.
 You: How do you know that?
+<<playsound Meow_1>>
 Koschka: Even you should be able to recognize the footsteps.
 You: No, I am not.
 Koschka: ... 
+<<playsound Meow_1>>
 Koschka: Anyways they probably want to complain about the smell...
 You: Oh no. I need more cat litter.
+<<playsound Meow_1>>
 Koschka: ...and the noise.
 You: I have to buy some.
     -> Buy cat litter. 
         <<set $money = $money - (3*20)>>
 You: I can feel a migraine coming on.
 You: I have to go to bed.
+<<playsound Meow_1>>
 Koschka: Well, suit yourself. 
 You: Good night, kittys.
+<<playsound Meow_1>>
 Koschka: Ugh.
 Koschka: Some of us have to work, you know?
 <<jump day11_morning>>

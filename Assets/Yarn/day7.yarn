@@ -25,22 +25,29 @@ title: day7_later
 You: Hehe.
 <<if $unemployment == false>>
 You: Happiness truly IS measured in cats!
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: Oops, it's my boss.
 You: Hello?
+<<playsound Boss_angry>>
 Boss: You're fired.
 You: Okay, fair.
 Boss: ...
+<<playsound Boss_annoyed>>
 Boss: What is wrong with you?
 You: She doesn't know that there is nothing wrong with me.
 You: That I have just discovered the true meaning of happiness.
 <<endif>>
 You: Nine may be the magic number. 
+<<playsound Meow_1>>
+<<playsound Meow_1>>
+<<playsound Meow_1>>
 Koschka: Nine for mortal men doomed to die.
 You: Huh?
 You: What was that?
 You: I swear I heard something...
 You: Weird.
+<<playsound Door>>
 Doorbell: *dingdong*
 You: Huh?
 You: Even weirder. I could swear I'm definitely not expecting anyone.

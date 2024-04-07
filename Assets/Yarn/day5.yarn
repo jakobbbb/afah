@@ -69,6 +69,7 @@ Jesper: Meow.
 ===
 title: day5_evenlater
 ---
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: ... my parents. 
 You: Again.
@@ -103,6 +104,7 @@ You: ...
 <<playsound Eltern_freundl_>>
 Parents: You know, we would love to...
 You: Oh sorry, I can't hear you anymore, the connection is breaking up. Bye.
+<<playsound Auflegen>>
 You: ...
 You: I'm a coward, aren't I?
 <<jump day5_end>>

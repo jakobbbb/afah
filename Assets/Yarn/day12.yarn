@@ -71,6 +71,7 @@ title: day12_morning
 <<set $money = $money + 150>>
 <<set $heist = true >>
 <<endif>>
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: Who is calling me at this time?
 You: Hello?
@@ -99,6 +100,7 @@ You: ...
 Parents: You know, your friend called us. They are concerned about you.
 Parents: Something about a lot of cats?
 You: Can't speak right now, gotta go to work.
+<<playsound Auflegen>>
 You: Oof, that was close.
 <<jump day12_morning2>>
 ===
@@ -126,6 +128,7 @@ You: Well...
 <<playsound Eltern_freundl_>>
 Parents: Yes?
 You: Can't speak right now, gotta go to work.
+<<playsound Auflegen>>
 You: Oof, that was close.
 <<jump day12_morning2>>
 ===
@@ -139,7 +142,7 @@ Parents: We are also good.
 <<if $think == true>>
 Parents: Did you have time to think about us seeing each other again?
 You: Not yet, sorry.
-Parents: No worries! Anyways... letter
+Parents: No worries! Anyways...
 <<else>>
 Parents: Anyways...
 <<endif>>
@@ -159,6 +162,7 @@ Parents: And we are not mad at you.
 Parents: Please let us help you.
 You: ...
 You: Gotta go, bye.
+<<playsound Auflegen>>
 <<jump day12_morning2>>
 ===
 title: parentsphone44
@@ -183,12 +187,14 @@ Parents: But please consider your situation right now and if this is something t
 You: ...
 You: Thank you.
 You: I will.
+<<playsound Auflegen>>
 <<set $money = $money + 300>>
 <<jump day12_morning2>>
 ===
 title: day12_morning2
 ---
 You: Why does everyone think I am unwell?
+<<playsound Meow_1>>
 Koschka: Have you always been this delusional?
 Koschka: Whatever, give us food now.
 You: Okay.
@@ -209,11 +215,14 @@ Catgirl: Damn, you still live like this?
 You: Yes, I still do.
 <<endif>>
 You: Can you feel the happiness?
+<<playsound Meow_1>>
 Koschka: I can smell it.
 You: Oops, we need more cat litter.
 -> Buy cat litter.
     <<set $money = $money - (4*20)>>
+<<playsound Door>>
 Door: *dingdong*
+<<playsound Nachbar>>
 Neighbor: Come on, I know you are in there!
 Neighbor: Do you think I cannot see you coming home with more cats every day?
 Neighbor: That ain't normal!
@@ -227,6 +236,7 @@ You: Hey!
     You: You should mind your own business!
 You: But that is irrelevant right now.
 You: The cats are staying!
+<<playsound Nachbar>>
 Neighbor: You can't do that to me!
 Neighbor: And to the cats!
 Neighbor: Do you really think it's good for them to live in your tiny flat with dozens of other cats?

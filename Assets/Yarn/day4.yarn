@@ -73,6 +73,7 @@ You: I need more cat litter and maybe another scratching post.
  -> Buy both.
      <<set $money = $money- 120>>
 You: I think that should be enough for now.
+<<playsound Door>>
 Doorbell: *dingdong*
 You: Oh that must be my friend!
 <<set $friend = $friend +1>>

@@ -67,6 +67,7 @@ Jesper: Meow.
 ===
 title: day2_evenlater
 ---
+<<playsound Telefon>>
 Phone: *ring* *ring*
 You: Huh?
 You: My parents are calling me.
@@ -94,6 +95,7 @@ You: ...
 <<playsound Eltern_freundl_>>
 Parents: We wanted to ask you...
 You: Sorry, the cat's trying to throw up on the carpet, gotta go. Bye.
+<<playsound Auflegen>>
 You: ...
 You: Sorry, I used you as an excuse to end the call.
 You: ...

@@ -76,9 +76,11 @@ You: I am not unwell.
 You: I am not spiraling.
 You: I am happy.
 You: I am happy.
+<<playsound Meow_1>>
 Koschka: Sounds like you're trying to convince yourself.
 You: Oh shut up.
 You: You know nothing, Koschka Cat.
+<<playsound Meow_1>>
 Koschka: Keep telling yourself that.
 You: Here is you food. Now leave me alone.
 <<set $money = $money - (45*5)>>
