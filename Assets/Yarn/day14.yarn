@@ -76,10 +76,13 @@ You: They are not gonna get me.
 You: And they are not gonna get in the way of my happiness.
 You: Here's your food, kittys.
 <<set $money = $money - (35*5)>>
+<<feedcats>>
+You: Bye, kittys!
 <<jump day14_later>>
 ===
 title: day14_later
 ---
+<<collectcats>>
 You: Hehe.
 You: I am so close.
 You: To true happiness.
@@ -103,7 +106,7 @@ Parents: And please let us support you.
 You: ...
 Parents: You have always been so strong and independent. 
 Parents: Even as a kid you always wanted to solve everything on your own.
-Parents: And we know you can do it.
+Parents: And we know you also can do it this time.
 Friend: You just have to see that there is a path out of this.
 Friend: And that you are not alone.
 Parents: We will always be here for you.
@@ -142,7 +145,7 @@ Friend: I will always be there for you.
 Friend: Please, take the first step.
 Friend: Please, let me help you on the way.
 Friend: Please...
-Friend: I don't want to lose you again.Friend
+Friend: I don't want to lose you again.
 Friend: And I am so sorry if I fucked up our friendship forever.
 Friend: I just want you to be happy.
 You: I AM happy.
@@ -156,11 +159,11 @@ You: Am I happy?
 You: Are they right?
 You: Am I unwell?
 You: Am I spiraling?
-Koschka: You are asking a cat.
+Koschka: I mean, you are asking a cat.
 Koschka: A talking cat but nonetheless.
 Koschka: Doesn't seem like the pinnacle of mental health to me.
 You: But I cannot give up now.
-You: What if the next cats are the once that finally help me acheive true happiness?
+You: What if the next cats are the ones that finally help me achieve true happiness?
 You: No, I cannot give up.
 You: Not now.
 You: Not if I am so close.
@@ -168,4 +171,5 @@ You: Tomorrow will be the day.
 You: I feel it in my bones. Good night.
 Koschka: ...
 Koschka: And I feel it in my throbbing headache.
+<<jump day15_morning>>
 ===

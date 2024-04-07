@@ -49,7 +49,7 @@ title: day13_morning
 <<set $crows = $crows + 1>>
 <<endif>>
 <<if $crows == 1>>
-<<set $money = $money + 2>>_
+<<set $money = $money + 2>>
 <<elseif $crows == 2>>
 <<set $money = $money + 5>>
 <<elseif $crows == 3>>
@@ -70,10 +70,13 @@ You: I am not spiraling.
 You: ...
 You: Here is your food.
 <<set $money = $money - (25*5)>>
+<<feedcats>>
+You: ...bye, kittys.
 <<jump day13_later>>
 ===
 title: day13_later
 ---
+<<collectcats>>
 Koschka: Do you really not think that you have a problem?
 You: Huh?
 -> No.
@@ -93,12 +96,13 @@ You: ...
 Officer: Hello? 
 Officer: I have to inform you that I will return with police force if necessary.
 Officer: And by necessary I mean if you do not cooperate.
+Officer: And by cooperate I mean open the door.
 You: ...
 -> Meow.
 -> Meeooowww.
 -> *silence*
 -> Fuck off.
-Officer: Okay, but you have been officially informed and I will put more informations in your letterbox.
+Officer: Okay, but you have been officially informed and I will put an informational leaflet in your letterbox.
 You: ...
 -> Meow.
 Officer: Why am I still working this job?
@@ -106,7 +110,7 @@ Officer: ...
 Officer: I should have become a circus clown like my parents wished.
 You: Oof, that was close.
 Koschka: You won't be able to dodge the fuzz forever.
-Koschka: These institutions are excerting the power that the governement hold over society.
+Koschka: These institutions are excerting the power that the governement holds over society.
 Koschka: But not only them.
 Koschka: Other institutions that may seem like they have nothing to do with political power.
 Koschka: They also maintain power in the hands of a certain social class and exclude the instruments of another social class.
@@ -124,4 +128,5 @@ You: I will think this over in the morning.
 You: Good night, kittys.
 Koschka: ...
 Koschka: Well, even I am now truly worried.
+<<jump day14_morning>>
 ===
