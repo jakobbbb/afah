@@ -4641,7 +4641,7 @@ PrefabInstance:
       objectReference: {fileID: 6644210899368139898}
     - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
       propertyPath: m_Canvasses.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
       propertyPath: m_Canvasses.Array.data[0].canvas
@@ -4652,12 +4652,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1883322356}
     - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.data[2].canvas
+      value: 
+      objectReference: {fileID: 2083367338}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.data[3].canvas
+      value: 
+      objectReference: {fileID: 1188581125}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
       propertyPath: m_Canvasses.Array.data[0].canvasName
       value: day
       objectReference: {fileID: 0}
     - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
       propertyPath: m_Canvasses.Array.data[1].canvasName
       value: afah
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.data[2].canvasName
+      value: end
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.data[3].canvasName
+      value: end2
       objectReference: {fileID: 0}
     - target: {fileID: 6642276702485387261, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
       propertyPath: m_Outside

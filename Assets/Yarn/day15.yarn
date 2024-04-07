@@ -166,4 +166,7 @@ You: Yes, thank you.
 Phone operator: Good luck and I wish you all the best on your road to recovery.
 You: Thank you.
 <<canvas end true>>
+<<wait  5>>
+<<canvas end false>>
+<<canvas end2 true>>
 ===
