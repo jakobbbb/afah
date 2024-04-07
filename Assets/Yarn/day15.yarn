@@ -94,6 +94,7 @@ You: I'll go now.
 ===
 title: day15_afah
 ---
+<<canvas afah true>>
 You: Something is different.
 You: Where are the cats?
 You: I need them.
@@ -141,6 +142,8 @@ You: I am loved.
 You: I need help.
 Cat: AFAH
 You: Thank you, cat. 
+<<wait 2>>
+<<canvas afah false>>
 <<jump day15_116117>>
 ===
 title: day15_116117
@@ -162,4 +165,5 @@ Phone operator: Good. And remember, in case of an emergency please call 112.
 You: Yes, thank you.
 Phone operator: Good luck and I wish you all the best on your road to recovery.
 You: Thank you.
+<<canvas end true>>
 ===
