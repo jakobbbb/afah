@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
     public bool IsInside { get; private set; }
 
     private GameState m_State = GameState.DIALOGUE;
+    private List<AudioClip> m_Meows = new();
 
     public static GameManager Instance;
     private DialogueRunner m_Dialogue;
@@ -45,6 +46,25 @@ public class GameManager : MonoBehaviour {
         m_Dialogue = FindAnyObjectByType<DialogueRunner>();
         m_AmbientSource.clip = m_AudioInside[0];
         m_AmbientSource.Play();
+        foreach (var sound in Instance.m_SoundEffects) {
+            if (sound.name.StartsWith("Meow")) {
+                m_Meows.Add(sound);
+            }
+        }
+    }
+
+    private void CheckMeow() {
+        if (Util.Roll(2)) {
+            if (Util.Roll(CatManager.Instance.GetCats().Count)) {
+                Meow();
+            }
+        }
+    }
+
+    public void Meow() {
+        int i = UnityEngine.Random.Range(0, m_Meows.Count);
+        m_EffectSource.PlayOneShot(m_Meows[i]);
+        Debug.Log("meowwww");
     }
 
     [YarnCommand("playsound")]
@@ -104,6 +124,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
+        CheckMeow();
         if (m_State == GameState.COLLECTING) {
             foreach (var cat in CatManager.Instance.GetCats()) {
                 if (!cat.Collected) {
