@@ -11,6 +11,18 @@ public class GameManager : MonoBehaviour {
         COLLECTING,
     }
 
+    [SerializeField]
+    private AudioClip m_AudioOutside;
+    [SerializeField]
+    private AudioClip[] m_AudioInside;
+    [SerializeField]
+    private AudioClip[] m_SoundEffects;
+
+    [SerializeField]
+    private AudioSource m_EffectSource;
+    [SerializeField]
+    private AudioSource m_AmbientSource;
+
     public bool IsInside { get; private set; }
 
     private GameState m_State = GameState.DIALOGUE;
@@ -30,6 +42,17 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         m_Dialogue = FindAnyObjectByType<DialogueRunner>();
+    }
+
+    [YarnCommand("playsound")]
+    public static void PlaySound(string soundname) {
+        foreach (var sound in Instance.m_SoundEffects) {
+            if (sound.name == soundname) {
+                Instance.m_EffectSource.PlayOneShot(sound);
+                return;
+            }
+        }
+        Debug.LogError("Sound " + soundname + " not found!!!");
     }
 
     [YarnCommand("collectcats")]

@@ -84,3 +84,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6011ccf4eec4d10db953c26d8bd849f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AudioOutside: {fileID: 0}
+  m_AudioInside: []
+  m_SoundEffects:
+  - {fileID: 8300000, guid: 0081823a05365ca81a906418979c8e56, type: 3}
+  - {fileID: 8300000, guid: cd533e683b91d9720a313269cd3a3a5b, type: 3}
+  - {fileID: 8300000, guid: dd19ab7427a7fe0acbd4516684551d91, type: 3}
+  - {fileID: 8300000, guid: 0cf1f565dab0b881ea4abd90855bad54, type: 3}
+  - {fileID: 8300000, guid: c3305dbe88ba34baa909d6f7ada9d8fe, type: 3}
+  - {fileID: 8300000, guid: 4f8a20ca7194baa1897e55902a7fd8a8, type: 3}
+  - {fileID: 8300000, guid: 6db167a800cd19153a1072d9a9c7fce0, type: 3}
+  - {fileID: 8300000, guid: f0ba173378fb2d3728bf915d4263cc03, type: 3}
+  - {fileID: 8300000, guid: e3e7d543965d3fbedadfa7e4493742b3, type: 3}
+  - {fileID: 8300000, guid: 0465754ee3f8a7199a9927800a3f2d01, type: 3}
+  - {fileID: 8300000, guid: ca2496e40273f2b0dba5e079fc4f6c01, type: 3}
+  - {fileID: 8300000, guid: 958aeb419db0a566d98626382f49524a, type: 3}
+  - {fileID: 8300000, guid: f4c183542f3da83fe996e336f43e43be, type: 3}
+  - {fileID: 8300000, guid: 2004b6e6e7b1bdbc28beb3b51f559571, type: 3}
+  - {fileID: 8300000, guid: 84c66032db38510368f10f4b4b22bd96, type: 3}
+  - {fileID: 8300000, guid: be76fa9780b0b35e6803701d09669716, type: 3}
+  - {fileID: 8300000, guid: b65cbe36551e5be55896ed6b8a4d93c1, type: 3}
+  - {fileID: 8300000, guid: 9da84c12df87a80d8a5b9559f3fa7174, type: 3}
+  - {fileID: 8300000, guid: f419d24100b16dc218b39f93da49b392, type: 3}
+  - {fileID: 8300000, guid: c2fd4e15b00c67dc79bc7ad327eacc8c, type: 3}
+  - {fileID: 8300000, guid: 8f516afbf9ceba4ceac7357c845e14a6, type: 3}
+  - {fileID: 8300000, guid: d2437c5ee13f39e7ea44b722c8e85774, type: 3}
+  - {fileID: 8300000, guid: 31cbfcb9777a52a79a6c7828b193d696, type: 3}
+  - {fileID: 8300000, guid: 10f34af8d9f2de8d7ac07e4614442446, type: 3}
+  - {fileID: 8300000, guid: ff320bac3fc609b7291da472679fc515, type: 3}
+  - {fileID: 8300000, guid: 64770824b72ae41cf8bb2e99b5196736, type: 3}
+  - {fileID: 8300000, guid: 430ed022473c4e694a8225a1c3e997dc, type: 3}
+  - {fileID: 8300000, guid: 7ebc83087f7477035985debbaa9b46ab, type: 3}
+  - {fileID: 8300000, guid: 2fa354cf272978677854f77ab6119483, type: 3}
+  - {fileID: 8300000, guid: a3e2e0debe52057abbd1c5af2d98eea8, type: 3}
+  - {fileID: 8300000, guid: b491d061c19145038ab6ffa2cf7d1a4d, type: 3}
+  - {fileID: 8300000, guid: 26b481aa4cb341a3583b16be26785a13, type: 3}
+  - {fileID: 8300000, guid: f699e8951834fd2c48f36c429e235493, type: 3}
+  - {fileID: 8300000, guid: 97788ba192787b2ecac100393f0d1252, type: 3}
+  - {fileID: 8300000, guid: 1681c7bf8e64ca5ad8bcad63de3275d1, type: 3}
+  - {fileID: 8300000, guid: 63f83f606021fa1cd9f29c1228825258, type: 3}
+  - {fileID: 8300000, guid: f2d853f1de393b6a1a1fa6ec691b7a26, type: 3}
+  m_EffectSource: {fileID: 0}
+  m_AmbientSource: {fileID: 0}

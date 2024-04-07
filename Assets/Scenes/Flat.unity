@@ -2071,6 +2071,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CatManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_EffectSource
+      value: 
+      objectReference: {fileID: 6644210899368139899}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_AmbientSource
+      value: 
+      objectReference: {fileID: 6644210899368139898}
     - target: {fileID: 6642276702485387261, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
       propertyPath: m_Outside
       value: 
@@ -2221,6 +2229,16 @@ PrefabInstance:
       addedObject: {fileID: 798865579}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bf3869f68cb7b90ab043dbfde1c3dfb, type: 3}
+--- !u!82 &6644210899368139898 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2763878101934453255, guid: 0bf3869f68cb7b90ab043dbfde1c3dfb, type: 3}
+  m_PrefabInstance: {fileID: 6644210899368139897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6644210899368139899 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6094301323720960116, guid: 0bf3869f68cb7b90ab043dbfde1c3dfb, type: 3}
+  m_PrefabInstance: {fileID: 6644210899368139897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
