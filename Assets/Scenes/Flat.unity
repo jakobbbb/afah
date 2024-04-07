@@ -3214,7 +3214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1883322354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3262,7 +3262,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883322353}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -4061,7 +4061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2056336844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4109,7 +4109,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056336843}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -4274,6 +4274,10 @@ PrefabInstance:
       value: CatManager
       objectReference: {fileID: 0}
     - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_DayText
+      value: 
+      objectReference: {fileID: 1938175113}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
       propertyPath: m_EffectSource
       value: 
       objectReference: {fileID: 6644210899368139899}
@@ -4281,6 +4285,26 @@ PrefabInstance:
       propertyPath: m_AmbientSource
       value: 
       objectReference: {fileID: 6644210899368139898}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.data[0].canvas
+      value: 
+      objectReference: {fileID: 2056336846}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.data[1].canvas
+      value: 
+      objectReference: {fileID: 1883322356}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.data[0].canvasName
+      value: day
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595638804778046730, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
+      propertyPath: m_Canvasses.Array.data[1].canvasName
+      value: afah
+      objectReference: {fileID: 0}
     - target: {fileID: 6642276702485387261, guid: a013efb372cd815128ff9da50c970e8f, type: 3}
       propertyPath: m_Outside
       value: 
