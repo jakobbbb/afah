@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Katzenbaum_0: -2690012241837201081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
