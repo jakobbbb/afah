@@ -9,4 +9,14 @@ public class InsaneFurniture : MonoBehaviour {
     private Sprite m_Insane;
     [SerializeField]
     private Sprite m_InsaneInsaneAsFuck;
+
+    public void UpdateInsanity(int insaneeee) {
+        Sprite s = m_Normal;
+        if (insaneeee == 1) {
+            s = m_Insane;
+        } else if (insaneeee == 2) {
+            s = m_InsaneInsaneAsFuck;
+        }
+        GetComponent<SpriteRenderer>().sprite = s;
+    }
 }

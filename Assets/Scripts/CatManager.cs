@@ -103,6 +103,9 @@ public class CatManager : MonoBehaviour {
         }
         if (prefabs.Count == 1) {
             InsanityLevel++;
+            foreach (var furniture in FindObjectsByType<InsaneFurniture>(FindObjectsSortMode.None)) {
+                furniture.UpdateInsanity(InsanityLevel);
+            }
         }
         int i = UnityEngine.Random.Range(0, prefabs.Count);
         GameObject prefab = prefabs[i];
