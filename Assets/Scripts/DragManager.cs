@@ -8,6 +8,8 @@ public class DragManager : MonoBehaviour {
 
     private List<Draggable> m_Draggables = new();
 
+    public Draggable CurrentlyHeld { get; private set; }
+
     private void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -29,7 +31,6 @@ public class DragManager : MonoBehaviour {
     void Update() {
         Drag();
     }
-
     void Drag() {
 
 
@@ -58,7 +59,6 @@ public class DragManager : MonoBehaviour {
             if (d.Collider.bounds.Contains(cursor) && cursor.z < min_z) {
                 min_z = cursor.z;
                 under_mouse = d;
-                Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaa");
             }
             d.IsAttached = false;
         }
@@ -68,5 +68,6 @@ public class DragManager : MonoBehaviour {
         }
 
         under_mouse.IsAttached = true;
+        CurrentlyHeld = under_mouse;
     }
 }
