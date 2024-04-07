@@ -38,7 +38,7 @@ title: day12_morning
 <<endif>>
 <<if $Nullvektor == true>>
 <<endif>>
-<<set $money = $money + 9>>_
+<<set $money = $money + 9>>
 <<if $Inej == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
@@ -165,14 +165,17 @@ You: I will.
 title: day12_morning2
 ---
 You: Why does everyone think I am unwell?
-Koschka: Have you always been this delulu?
+Koschka: Have you always been this delusional?
 Koschka: Whatever, give us food now.
 You: Okay.
 <<set $money = $money - (20*5)>>
+<<feedcats>>
+You: Bye, kittys.
 <<jump day12_later>>
 ===
 title: day12_later
 ---
+<<collectcats>>
 You: Can you feel the happiness?
 Koschka: I can smell it.
 You: Oops, we need more cat litter.
@@ -204,4 +207,5 @@ You: They are the one who's being impossible.
 You: I am perfectly reasonable.
 You: And soon everyone will see that too.
 You: Good night, kittys.
+<<jump day13_morning>>
 ===

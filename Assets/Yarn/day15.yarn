@@ -82,6 +82,8 @@ You: You know nothing, Koschka Cat.
 Koschka: Keep telling yourself that.
 You: Here is you food. Now leave me alone.
 <<set $money = $money - (45*5)>>
+<<feedcats>>
+You: I'll go now.
 <<jump day15_afah>>
 ===
 title: day15_afah
@@ -143,7 +145,7 @@ You: My mental health is really bad.
 You: And I have a lot of cats.
 Phone operator: Do you have any thoughts about hurting yourself ... or the cats?
 You: No.
-Phone operator: Okay, I can make you a psychotherapy appointment tomorrow, would that be okay?
+Phone operator: Okay, I can offer you a psychotherapy appointment tomorrow, would that be okay?
 You: Sure.
 Phone operator: I'll tell you the time and the place. 
 You: Thank you.
