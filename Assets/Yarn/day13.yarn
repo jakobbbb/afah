@@ -21,7 +21,8 @@ title: day13_morning
 <<set $money = $money + 11>>
 <<endif>>
 <<if $Harald == true>>
-<<set $money = $money + 10>_
+<<set $money = $money + 10>>
+<<endif>>
 <<if $Ringo == true>>
 <<set $money = $money + 9>>
 <<endif>>
@@ -35,7 +36,8 @@ title: day13_morning
 <<set $money = $money + 10>>
 <<endif>>
 <<if $Nullvektor == true>>
-<<set $money = $money + 9>>_
+<<set $money = $money + 9>>
+<<endif>>
 <<if $Inej == true>>
 <<set $crows = $crows + 1>>
 <<endif>>
@@ -97,5 +99,27 @@ You: ...
 Officer: Okay, but you have been officially informed and I will put more informations in your letterbox.
 You: ...
 -> Meow.
-Officer: I should have become an astronaut 
+Officer: Why am I still working this job?
+Officer: ...
+Officer: I should have become a circus clown like my parents wished.
+You: Oof, that was close.
+Koschka: You won't be able to dodge the fuzz forever.
+Koschka: These institutions are excerting the power that the governement hold over society.
+Koschka: But not only them.
+Koschka: Other institutions that may seem like they have nothing to do with political power.
+Koschka: They also maintain power in the hands of a certain social class and exclude the instruments of another social class.
+You: ...
+You: Where did that come from?
+Koschka: I watch a lot of Youtube videos.
+You: Fair enough.
+You: So we just have to destroy all institutions to be truly free?
+Koschka: Probably? 
+You: Because they are after me.
+You: And won't stop until they have destroyed me.
+You: They don't want me to be happy.
+Koschka: Uhm, that's not what I said?
+You: I will think this over in the morning.
+You: Good night, kittys.
+Koschka: ...
+Koschka: Well, even I am now truly worried.
 ===
