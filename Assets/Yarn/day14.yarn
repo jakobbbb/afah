@@ -1,0 +1,223 @@
+title: day14_morning
+---
+<<set $crows = 0>>
+<<set $money = $money + 15>>
+<<if $Miette == true>>
+<<set $money = $money + 15>>
+<<endif>>
+<<if $Peter == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Luise == true || $Lotte == true>>
+<<set $money = $money + 8>>
+<<endif>>
+<<if $Lotte == true && $Luise == true>>
+<<set $money = $money + 16>>
+<<endif>>
+<<if $Kasimir == true>>
+<<set $money = $money + 6>>
+<<endif>>
+<<if $Albert == true>>
+<<set $money = $money + 11>>
+<<endif>>
+<<if $Harald == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Ringo == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $TanteEdelgart == true>>
+<<set $money = $money + 13>>
+<<endif>>
+<<if $Toni == true>>
+<<set $money = $money + 7>>
+<<endif>>
+<<if $Egg == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Nullvektor == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $Inej == true>>
+<<set $crows = $crows + 1>>
+<<endif>>title: day13_morning
+---
+<<set $crows = 0>>
+<<set $money = $money + 15>>
+<<if $Miette == true>>
+<<set $money = $money + 15>>
+<<endif>>
+<<if $Peter == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Luise == true || $Lotte == true>>
+<<set $money = $money + 8>>
+<<endif>>
+<<if $Lotte == true && $Luise == true>>
+<<set $money = $money + 16>>
+<<endif>>
+<<if $Kasimir == true>>
+<<set $money = $money + 6>>
+<<endif>>
+<<if $Albert == true>>
+<<set $money = $money + 11>>
+<<endif>>
+<<if $Harald == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Ringo == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $TanteEdelgart == true>>
+<<set $money = $money + 13>>
+<<endif>>
+<<if $Toni == true>>
+<<set $money = $money + 7>>
+<<endif>>
+<<if $Egg == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Nullvektor == true>>
+<<set $money = $money + 9>>
+<<endif>>
+<<if $Inej == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Matthias == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Wylan == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $crows == 1>>
+<<set $money = $money + 2>>_
+<<elseif $crows == 2>>
+<<set $money = $money + 5>>
+<<elseif $crows == 3>>
+<<set $money = $money + 20>>
+<<elseif $crows == 4>>
+<<set $money = $money + 50>>
+<<elseif $crows == 5>>
+<<set $money = $money + 120>>
+<<elseif $crows == 6>>
+<<set $money = $money + 150>>
+<<set $heist = true >>
+<<endif>>
+<<if $Matthias == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Wylan == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $crows == 1>>
+<<set $money = $money + 2>>_
+<<elseif $crows == 2>>
+<<set $money = $money + 5>>
+<<elseif $crows == 3>>
+<<set $money = $money + 20>>
+<<elseif $crows == 4>>
+<<set $money = $money + 50>>
+<<elseif $crows == 5>>
+<<set $money = $money + 120>>
+<<elseif $crows == 6>>
+<<set $money = $money + 150>>
+<<set $heist = true >>
+<<endif>>
+You: I gotta fight 'em all.
+You: They are not gonna get me.
+You: And they are not gonna get in the way of my happiness.
+You: Here's your food, kittys.
+<<set $money = $money - (45*5)>>
+<<jump day14_later>>
+===
+title: day14_later
+---
+You: Hehe.
+You: I am so close.
+You: To true happiness.
+You: Hehehehehehe.
+Koschka: Uh oh, here come trouble.
+Door: *dingdong*
+<<if $parents == 4>>
+Friend: Hey, it's me and your parents!
+You: Ugh, what do they want?
+Parents: Sweetie, please open up!
+Parents: We worry about you so much!
+You: ...
+Friend: Please.
+Parents: We love you so much.
+Friend: Even if you never get better.
+Parents: You will still be loved.
+Friend: But we need you to see that you are unwell.
+Parents: And that is nothing to be ashamed of.
+Friend: We need you to get better for yourself.
+Parents: And please let us support you.
+You: ...
+Parents: You have always been so strong and independent. 
+Parents: Even as a kid you always wanted to solve everything on your own.
+Parents: And we know you can do it.
+Friend: You just have to see that there is a path out of this.
+Friend: And that you are not alone.
+Parents: We will always be here for you.
+Parents: We will always have your back.
+Friend: Please, take the first step.
+Friend: And let us help you on the way.
+Friend: Please...
+Friend: I don't want to lose you again.
+Friend: And I am so sorry if I fucked up our friendship forever.
+Friend: I just want you to be happy.
+You: I AM happy.
+You: You do not need to worry.
+You: I will contact you soon.
+Friend: Okay.
+Parents: If that's what you need right now.
+<<else>>
+Friend: Hey, it's me!
+You: Ugh, what do they want?
+Friend: Please open up!
+Friend: I miss you!
+Friend: And I worry about you so much!
+You: ...
+Friend: Please.
+Friend: I adore you so much.
+Friend: I will still adore you even if you never get better.
+Friend: But I need you to see that you are unwell.
+Friend: I need you to get better for yourself.
+Friend: I need you to let me help you.
+Friend: Please.
+Friend: I need you.
+You: ...
+Friend: I know you can do it.
+Friend: You just have to see that there is a path out of this.
+Friend: And that you are not alone.
+Friend: I will always be there for you.
+Friend: Please, take the first step.
+Friend: Please, let me help you on the way.
+Friend: Please...
+Friend: I don't want to lose you again.Friend
+Friend: And I am so sorry if I fucked up our friendship forever.
+Friend: I just want you to be happy.
+You: I AM happy.
+You: You do not need to worry.
+You: I will contact you soon.
+Friend: Okay.
+Friend: If that's what you need right now.
+<<endif>>
+You: ...
+You: Am I happy?
+You: Are they right?
+You: Am I unwell?
+You: Am I spiraling?
+Koschka: You are asking a cat.
+Koschka: A talking cat but nonetheless.
+Koschka: Doesn't seem like the pinnacle of mental health to me.
+You: But I cannot give up now.
+You: What if the next cats are the once that finally help me acheive true happiness?
+You: No, I cannot give up.
+You: Not now.
+You: Not if I am so close.
+You: Tomorrow will be the day.
+You: I feel it in my bones. Good night.
+Koschka: ...
+Koschka: And I feel it in my throbbing headache.
+===
