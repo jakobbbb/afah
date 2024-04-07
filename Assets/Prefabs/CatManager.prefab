@@ -46,9 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5373407d274324815b8ba7bd625fe114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AvailableCats:
-  - {fileID: 11400000, guid: e9a7b33f372d39b08bb19bee25387486, type: 2}
   m_CatPrefab: {fileID: 5357162203590811542, guid: 45ab9278d2aedc854a710b25997afd71, type: 3}
+  m_SpawnableCats_Level0:
+  - {fileID: 907089327778480012, guid: ab63e4fb6eb5c18469f4dc51269ec82b, type: 3}
+  m_SpawnableCats_Level1: []
+  m_SpawnableCats_Level2: []
+  m_SpawnableCats_Level3: []
+  m_Outside: {fileID: 0}
 --- !u!114 &8771130119966687286
 MonoBehaviour:
   m_ObjectHideFlags: 0

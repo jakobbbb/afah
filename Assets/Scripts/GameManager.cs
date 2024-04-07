@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour {
     public static void CollectCats() {
         Instance.m_State = GameState.COLLECTING;
         Instance.IsInside = false;
+        CatManager.Instance.SpawnCat();
 
         Instance.ApplyStateChange();
     }
@@ -49,5 +50,16 @@ public class GameManager : MonoBehaviour {
 
     private void ApplyStateChange() {
         m_Dialogue.GetComponentInChildren<Canvas>().enabled = m_State == GameState.DIALOGUE;
+    }
+
+    void Update() {
+        if (m_State == GameState.COLLECTING) {
+            foreach (var cat in CatManager.Instance.GetCats()) {
+                if (!cat.Collected) {
+                    return;
+                }
+            }
+            DoneCollecting();
+        }
     }
 }

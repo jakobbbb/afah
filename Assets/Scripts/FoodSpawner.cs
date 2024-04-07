@@ -32,10 +32,12 @@ public class FoodSpawner : MonoBehaviour {
             world.z = m_ColliderDelete.bounds.center.z;
             if (m_ColliderDelete.bounds.Contains(world) && DragManager.Instance.CurrentlyHeld) {
                 var held_food = DragManager.Instance.CurrentlyHeld.GetComponent<Food>();
-                var d = held_food.GetComponent<Draggable>();
-                if (held_food && d && d.isActiveAndEnabled  && d.IsAttached) {
-                    Destroy(held_food.gameObject);
-                    Debug.Log("food be gone");
+                if (held_food) {
+                    var d = held_food.GetComponent<Draggable>();
+                    if (d && d.isActiveAndEnabled  && d.IsAttached) {  // just making reeeeeeeally sure
+                        Destroy(held_food.gameObject);
+                        Debug.Log("food be gone");
+                    }
                 }
             }
         }

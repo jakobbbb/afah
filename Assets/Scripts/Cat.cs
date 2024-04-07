@@ -37,8 +37,11 @@ public class Cat : MonoBehaviour {
     [SerializeField]
     private SpriteRenderer m_Hungy = null;
 
+    public bool Collected { get; set; }
+
     void Start() {
         Debug.Log("meow");
+        Collected = false;
         m_MaxVelocity = UnityEngine.Random.Range(2f, 4f);
         CatManager.Instance.RegisterCat(this);
         m_StateChangeRollCooldown = UnityEngine.Random.Range(0f, 5f);
@@ -57,12 +60,12 @@ public class Cat : MonoBehaviour {
     void Update() {
     }
     void ChooseZoomieTarget() {
-        var n = CatManager.Instance.GetWalkable().Count;
+        var n = CatManager.Instance.GetWalkable(this).Count;
         if (n == 0) {
             return;
         }
         var i = UnityEngine.Random.Range(0, n);
-        var c = CatManager.Instance.GetWalkable()[i];
+        var c = CatManager.Instance.GetWalkable(this)[i];
         var x = UnityEngine.Random.Range(c.bounds.min.x,c.bounds.max.x);
         var y = UnityEngine.Random.Range(c.bounds.min.y,c.bounds.max.y);
         m_ZoomAndIdleTarget.position = new Vector3(x, y, m_ZoomAndIdleTarget.position.z);
@@ -199,7 +202,7 @@ public class Cat : MonoBehaviour {
     void UpdateClosest() {
         float closest_dist = 999999f;
         Collider2D closest = null;
-        foreach (var c in CatManager.Instance.GetWalkable()) {
+        foreach (var c in CatManager.Instance.GetWalkable(this)) {
             c.GetComponent<SpriteRenderer>().color = Color.white;
             Vector3 p = c.bounds.ClosestPoint(m_NavBase.position);
             p.z = 0f;
@@ -295,7 +298,7 @@ public class Cat : MonoBehaviour {
         if (m_JumpCooldown <= 0f) {
             Vector2 best_jump = Vector2.zero;
             float best_jump_gain = 0f;  // how closer the cat would move if it jumped
-            foreach (var coll in CatManager.Instance.GetWalkable()) {
+            foreach (var coll in CatManager.Instance.GetWalkable(this)) {
                 var closest = coll.ClosestPoint(m_NavBase.position);
                 var jump_to_target = (Vector2)m_NavTarget.position - closest;
                 var current_to_jump = closest - (Vector2)m_NavBase.position;

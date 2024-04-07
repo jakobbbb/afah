@@ -23,6 +23,9 @@ public class Draggable : MonoBehaviour {
             var world = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             world.z = transform.position.z;
             transform.position = world;
+            if (GetComponent<Cat>() != null) {
+                GetComponent<Cat>().Collected = true;
+            }
         }
     }
 }
