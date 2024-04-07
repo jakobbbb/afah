@@ -10,11 +10,14 @@ You: What a beautiful day!
 You: I think I'll go for a walk.
 You: ... after I feed you, of course.
 <<set $money = $money - (3*5)>>
+<<feedcats>>
+You: Bye, kittys.
 <<jump day4_later>>
 ===
 
 title: day4_later
 ---
+<<collectcats>>
 <<set $cats = $cats + 1>>
 You: Huh, guess I have four cats now.
 <<jump catsmeow94>>
@@ -80,12 +83,12 @@ You: ...
         Friend: *laughs*
 Friend: Well, they seem to be happy and you look much more relaxed, maybe this is exactly what you needed.
 You: Yes, maybe...
-Friend: Wanna order some pizza and continue our series?
+Friend: Wanna order some pizza and continue watching our series?
 You: Sure!
 *Several hours later*
 Friend: I cannot believe he did that!
 You: Yes! Especially after what happenend the last time they met!
-Friend: She deserves better but well... 
+Friend: She deserves better but... 
 Friend: Oh, look at the time! I have to hurry if I want to catch the last bus.
 You: ...right. I almost forgot you don't live here.
 You: Get home safe!

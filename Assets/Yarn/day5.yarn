@@ -14,10 +14,13 @@ You: Maybe... I need more.
 You: I'll get just one more.
 You: After I feed you.
 <<set $money = $money - (4*5)>>
+<<feedcats>>
+You: ...bye, kittys.
 <<jump day5_later>>
 ===
 title: day5_later
 ---
+<<collectcats>>
 <<set $cats = $cats + 1>>
 You: Five. That seems like a good number.
 <<jump catsmeow95>>

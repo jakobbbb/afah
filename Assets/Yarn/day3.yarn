@@ -12,7 +12,7 @@ You: I think I'll go for a walk.
 You: ... after I feed you, of course.
 <<set $money = $money - (2*5)>>
 <<feedcats>>
-You: Bye, kitty.
+You: Bye, kittys.
 <<jump day3_later>>
 ===
 
@@ -64,7 +64,7 @@ position: 43,95
 <<set $friend = $friend + 1>>
 Phone: *ring* *ring*
 You: Oh, it's my friend!
-You: Hello?
+You: Hello!
 Friend: Hi!
 Friend: I just wanted to know if were still on for tomorrow?
 You: Sure!
