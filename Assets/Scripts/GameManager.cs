@@ -34,9 +34,23 @@ public class GameManager : MonoBehaviour {
 
     [YarnCommand("collectcats")]
     public static void CollectCats() {
+        Debug.Log("Collecting...");
         Instance.m_State = GameState.COLLECTING;
         Instance.IsInside = false;
         CatManager.Instance.SpawnCat();
+
+        Instance.ApplyStateChange();
+    }
+
+    [YarnCommand("feedcats")]
+    public static void FeedCats() {
+        Debug.Log("Feeding...");
+        Instance.IsInside = true;
+
+        foreach (var cat in CatManager.Instance.GetCats()) {
+            cat.SetHungy(true);
+        }
+        Instance.m_State = GameState.FEEDING;
 
         Instance.ApplyStateChange();
     }
@@ -46,10 +60,16 @@ public class GameManager : MonoBehaviour {
         m_State = GameState.DIALOGUE;
 
         Instance.ApplyStateChange();
+        Debug.Log("...done collecting and feeding.");
     }
 
     private void ApplyStateChange() {
         m_Dialogue.GetComponentInChildren<Canvas>().enabled = m_State == GameState.DIALOGUE;
+        if (m_State != GameState.FEEDING) {
+            foreach (var cat in CatManager.Instance.GetCats()) {
+                cat.SetHungy(false);
+            }
+        }
     }
 
     void Update() {
@@ -60,6 +80,14 @@ public class GameManager : MonoBehaviour {
                 }
             }
             DoneCollecting();
+        } else if (m_State == GameState.FEEDING) {
+            foreach (var cat in CatManager.Instance.GetCats()) {
+                if (cat.Hungy()) {
+                    return;
+                }
+            }
+            DoneCollecting();
+
         }
     }
 }

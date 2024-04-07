@@ -72,7 +72,11 @@ public class Cat : MonoBehaviour {
         m_NavTarget = m_ZoomAndIdleTarget;
     }
 
-    bool Hungy() {
+    public void SetHungy(bool hungry) {
+        m_FoodTimer = hungry ? 0f : 100f;
+    }
+
+    public bool Hungy() {
         return m_FoodTimer < 6f;
     }
    

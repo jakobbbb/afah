@@ -94,6 +94,9 @@ public class CatManager : MonoBehaviour {
         if (prefabs == null || prefabs.Count == 0) {
             GameManager.Instance.DoneCollecting();
         }
+        if (prefabs.Count == 1) {
+            InsanityLevel++;
+        }
         int i = UnityEngine.Random.Range(0, prefabs.Count);
         GameObject prefab = prefabs[i];
         var cat = Instantiate<GameObject>(prefab, m_Outside.bounds.center, Quaternion.identity);
@@ -103,6 +106,7 @@ public class CatManager : MonoBehaviour {
         vars.SetValue("$" + cat.name, true);
         Debug.Log("Meow" + cat.name);
         prefabs.Remove(prefab);
+        cat.GetComponent<Cat>().SetHungy(false);
     }
 
     

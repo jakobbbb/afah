@@ -8,12 +8,15 @@ You: What a beautiful day!
 You: I think I'll go for a walk.
 Koschka: Meow.
 You: ... after I feed you, of course.
+<<feedcats>>
+Koschka: Meow.
 <<set $money = $money - (1*5)>>
 <<jump day2_later>>
 ===
 
 title: day2_later
 ---
+<<collectcats>>
 <<set $cats = $cats + 1>>
 <<declare $parents = 0>>
 You: Huh, guess I have two cats now.
