@@ -1,0 +1,204 @@
+title: day12_morning
+---
+<<set $crows = 0>>
+<<set $money = $money + 15>>
+<<if $Miette == true>>
+<<set $money = $money + 15>>
+<<endif>>
+<<if $Peter == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Luise == true || $Lotte == true>>
+<<set $money = $money + 8>>
+<<endif>>
+<<if $Lotte == true && $Luise == true>>
+<<set $money = $money + 16>>
+<<endif>>there when you need help
+<<if $Kasimir == true>>
+<<set $money = $money + 6>>
+<<endif>>
+<<if $Albert == true>>
+<<set $money = $money + 11>>
+<<endif>>
+<<if $Harald == true>>
+<<set $money = $money + 10>_
+<<if $Ringo == true>>have have 
+<<set $money = $money + 9>>
+<<endif>>
+<<if $TanteEdelgart == true>>
+<<set $money = $money + 13>>
+<<endif>>there when you need_ help
+<<if $Toni == true>>
+<<set $money = $money + 7>>
+<<endif>>
+<<if $Egg == true>>
+<<set $money = $money + 10>>
+<<endif>>
+<<if $Nullvektor == true>>
+<<set $money = $money + 9>>_
+<<if $Inej == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Matthias == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $Wylan == true>>
+<<set $crows = $crows + 1>>
+<<endif>>
+<<if $crows == 1>>
+<<set $money = $money + 2>>_
+<<elseif $crows == 2>>
+<<set $money = $money + 5>>
+<<elseif $crows == 3>>
+<<set $money = $money + 20>>
+<<elseif $crows == 4>>
+<<set $money = $money + 50>>
+<<elseif $crows == 5>>
+<<set $money = $money + 120>>
+<<elseif $crows == 6>>
+<<set $money = $money + 150>>
+<<set $heist = true >>
+<<endif>>
+Phone: *ring* *ring*
+You: Who is calling me at this time?
+You: Hello?
+Parents: Hello, sweetie.
+<<set $parents = $parents + 1>>
+<<if $parents == 1>>
+    <<jump parentsphone41>>
+<<elseif $parents == 2>>
+    <<jump parentsphone42>>
+<<elseif $parents == 3>>
+    <<jump parentsphone43>>
+<<elseif $parents == 4>>
+    <<jump parentsphone44>>
+<<endif>>
+===
+title: parentsphone41
+---
+Parents: How are you?
+You: Good.
+You: And you?
+Parents: We are also good.
+You: ...
+Parents: You know, your friend called us. They are concerned about you.
+Parents: Something about a lot of cats?
+You: Can't speak right now, gotta go to work.
+You: Oof, that was close.
+<<jump day12_morning2>>
+===
+title: parentsphone42
+---
+Parents: How are you?
+You: Good.
+You: And you?
+Parents: We are also good.
+<<if $think == true>>
+Parents: Did you have time to think about us seeing each other again?
+You: Um...
+Parents: No worries! Anyways...
+<<else>>
+Parents: Anyways...
+<<endif>>
+Parents: We wanted to call you because your friend told us they are concerned about you.
+Parents: And what they told us does sound concerning.
+Parents: What is going on in your life right now?
+You: Um...
+You: Well...
+Parents: Yes?
+You: Can't speak right now, gotta go to work.
+You: Oof, that was close.
+<<jump day12_morning2>>
+===
+title: parentsphone43
+---
+Parents: How are you?
+You: Good.
+You: And you?
+Parents: We are also good.
+<<if $think == true>>
+Parents: Did you have time to think about us seeing each other again?
+You: Not yet, sorry.
+Parents: No worries! Anyways...
+<<else>>
+Parents: Anyways...
+<<endif>>
+Parents: We wanted to call you because your friend told us they are worried about you.
+Parents: And we are also worried about you.
+Parents: What is going on in your life right now?
+Parents: Is there anything we can do for you?
+You: Um...
+You: Well...
+You: ...
+You: Can't speak right now, gotta go to work.
+Parents: Sweetie, we know that you have been fired again.
+Parents: And we are not mad at you.
+Parents: Please let us help you.
+You: ...
+You: Gotta go, bye.
+<<jump day12_morning2>>
+===
+title: parentsphone44
+---
+Parents: Sweetie, we want to be honest with you.
+Parents: We are very worried about you.
+Parents: You friend came over and told us about you spiraling again.
+Parents: That you got fired from your job because you were too busy collecting cats?
+You: Um...
+Parents: Sweetie, we all love you very much and want you to get better.
+Parents: Is there anything we can do to help?
+You: ...
+You: ...
+You: ...
+You: I need money for the cats?
+Parents: Okay, we will send you some money.
+Parents: But please consider your situation right now and if this is something that's making you happy and if you want to continue your life like that.
+You: ...
+You: Thank you.
+You: I will.
+<<set $money = $money + 300>>
+<<jump day12_morning2>>
+===
+title: day12_morning2
+---
+You: Why does everyone think I am unwell?
+Koschka: Have you always been this delulu?
+Koschka: Whatever, give us food now.
+You: Okay.
+<<set $money = $money - (20*5)>>
+<<jump day12_later>>
+===
+title: day12_later
+---
+You: Can you feel the happiness?
+Koschka: I can smell it.
+You: Oops, we need more cat litter.
+-> Buy cat litter.
+    <<set $money = $money - (4*20)>>
+Door: *dingdong*
+Neighbor: Come on, I know you are in there!
+Neighbor: Do you think I cannot see you coming home with more cats every day?
+Neighbor: That ain't normal!
+Neighbor: And they are loud and stinky!
+You: Hey!
+-> They are not loud.
+    You: They have very soft feet and gentle voices.
+-> They are not stinky.
+    You: I just bought new cat litter!
+-> Why do you think you can tell me what is normal?
+    You: You should mind your own business!
+You: But that is irrelevant right now.
+You: The cats are staying!
+Neighbor: You can't do that to me!
+Neighbor: And to the cats!
+Neighbor: Do you really think it's good for them to live in your tiny flat with dozens of other cats?
+You: They are not even two dozens!!
+Neighbor: You are impossible!
+Neighbor: I will not let that slide...
+You: Try me bitch.
+You: ...
+You: They are the one who's being impossible.
+You: I am perfectly reasonable.
+You: And soon everyone will see that too.
+You: Good night, kittys.
+===

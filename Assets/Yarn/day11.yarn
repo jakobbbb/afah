@@ -13,7 +13,7 @@ title: day11_morning
 <<endif>>
 <<if $Lotte == true && $Luise == true>>
 <<set $money = $money + 16>>
-<<endif>>
+<<endif>>there when you need help
 <<if $Kasimir == true>>
 <<set $money = $money + 6>>
 <<endif>>
@@ -28,7 +28,7 @@ title: day11_morning
 <<endif>>
 <<if $TanteEdelgart == true>>
 <<set $money = $money + 13>>
-<<endif>>
+<<endif>>there when you need help
 <<if $Toni == true>>
 <<set $money = $money + 7>>
 <<endif>>

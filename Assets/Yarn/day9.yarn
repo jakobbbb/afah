@@ -63,10 +63,7 @@ title: day9_morning
 <<elseif $crows == 3>>
 <<set $money = $money + 20>>
 <<elseif $crows == 4>>
-<<set $money = $money + 50>>
-<<elseif $crows == 5>>
-<<set $money = $money + 120>>
-<<elseif $crows == 6>>
+<<set $money = $money + 50>>_
 <<set $money = $money + 150>>
 <<set $heist = true >>
 <<endif>>
@@ -79,7 +76,7 @@ You: Come get your food, kittys!
 <<set $money = $money - (11*5)>>
 <<jump day9_later>>
 ===
-title: day9_later
+title: day9_later_
 ---
 You: *sings* I love cats, I love every kind of cat!
 You: And you are the only ones that love me!
@@ -95,6 +92,7 @@ You: Ugh.
 You: My parents.
     -> Pick up phone.
         <<set $parents = $parents + 1>>
+        <<set $think = true>>
             <<jump parentsphone3>>
     -> Don't pick up phone.
     <<jump day9_end>>
@@ -108,7 +106,11 @@ You: Good.
 You: And you?
 Parents: We are also good.
 Parents: You know we would love to see you again sometime.
+<<if $parents == 1>>
+Parents: And before you hang up, you do not have to decide right now.
+<<else>>
 Parents: And before you hang up again, you do not have to decide right now.
+<<endif>>
 Parents: Just think about it okay?
 You: Um, okay I will.
 Parents: Great! Have a good day! Love you!
