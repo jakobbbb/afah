@@ -21,7 +21,8 @@ title: day12_morning
 <<set $money = $money + 11>>
 <<endif>>
 <<if $Harald == true>>
-<<set $money = $money + 10>_
+<<set $money = $money + 10>>
+<<endif>>
 <<if $Ringo == true>>have have 
 <<set $money = $money + 9>>
 <<endif>>
@@ -35,6 +36,7 @@ title: day12_morning
 <<set $money = $money + 10>>
 <<endif>>
 <<if $Nullvektor == true>>
+<<endif>>
 <<set $money = $money + 9>>_
 <<if $Inej == true>>
 <<set $crows = $crows + 1>>
