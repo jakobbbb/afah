@@ -97,3 +97,6 @@ UserSettings
 
 *.exr
 *.exr.meta
+
+*.ods#
+.vsconfig
